@@ -1,0 +1,7 @@
+{
+  "name": "Tiny Techs Club Text Editor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
