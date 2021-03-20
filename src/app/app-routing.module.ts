@@ -4,13 +4,41 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'outreach',
+    loadChildren: () => import('./pages/outreach/outreach.module').then( m => m.OutreachPageModule)
+  },
+  {
+    path: 'careers',
+    loadChildren: () => import('./pages/careers/careers.module').then( m => m.CareersPageModule)
+  },
+  {
+    path: 'overview',
+    loadChildren: () => import('./pages/careers/careers.module').then( m => m.CareersPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/careers/careers.module').then( m => m.CareersPageModule)
+  },
+  {
+    path: 'events',
+    loadChildren: () => import('./pages/careers/careers.module').then( m => m.CareersPageModule)
+  },
+  {
+    path: 'stem-socials',
+    loadChildren: () => import('./pages/stem-socials/stem-socials.module').then( m => m.StemSocialsPageModule)
+  },
+  {
+    path: 'stem-social-confirmation',
+    loadChildren: () => import('./pages/stem-social-confirmation/stem-social-confirmation.module').then( m => m.StemSocialConfirmationPageModule)
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,170 @@
+.container {
+    position: relative;
+    display: flex;
+}
+
+.leftDiv {
+    flex: 12;
+    background-color: white;
+}
+.leftDiv img {
+    width: 100%;
+}
+
+.rightDiv {
+    flex: 17;
+    background-color: white;
+}
+.rightDiv .contentDiv {
+    min-width: 500px;
+    width: 55%;
+    margin: auto;
+    position: relative;
+    top: 20%;
+}
+.contentDiv h1,
+.contentDiv p {
+    text-align: center;
+}
+.contentDiv h1 {
+    font-family: "Poppins Bold";
+    font-size: 36px;
+    margin-top: 0;
+}
+.contentDiv p {
+    font-family: "Poppins Regular";
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 0;
+}
+
+.learnMoreDiv {
+    width: 250px;
+    margin: 50px auto;
+}
+.learnMoreButton {
+    width: 100%;
+
+    font-size: 18px;
+    text-align: center;
+
+    background-color:  var(--ion-color-TTCLime);
+    padding: 20px 0px;
+}
+
+
+@media (max-width: 1207px){
+    .rightDiv .contentDiv {
+        min-width: 490px;
+        top: 14%;
+    }
+    .contentDiv h1 {
+        font-size: 30px;
+    }
+    .contentDiv p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .learnMoreButton {
+        font-size: 14px;
+        line-height: 25px;
+        padding: 10px 0px;
+    }
+    .learnMoreDiv {
+        width: 200px;
+        margin: 25px auto;
+    }
+}
+@media (max-width: 939px){
+    .rightDiv .contentDiv {
+        min-width: 350px;
+        top: 15%;
+    }
+    .contentDiv h1 {
+        font-size: 25px;
+    }
+    .contentDiv p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .learnMoreButton {
+        font-size: 12x;
+        line-height: 20px;
+        padding: 10px 0px;
+    }
+    .learnMoreDiv {
+        width: 170px;
+        margin: 20px auto;
+    }
+}
+@media (max-width: 745px){
+    .rightDiv .contentDiv {
+        min-width: 270px;
+        top: 15%;
+    }
+    .contentDiv h1 {
+        font-size: 18px;
+    }
+    .contentDiv p {
+        font-size: 9px;
+        line-height: 15px;
+    }
+    .learnMoreButton {
+        font-size: 9px;
+        line-height: 15px;
+        padding: 7px 0px;
+    }
+    .learnMoreDiv {
+        width: 120px;
+        margin: 14px auto;
+    }
+}
+@media (max-width: 587px){
+    .rightDiv .contentDiv {
+        min-width: 200px;
+        top: 15%;
+    }
+    .contentDiv h1 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .contentDiv p {
+        font-size: 7px;
+        line-height: 10px;
+        margin-top: 5px;
+    }
+    .learnMoreButton {
+        font-size: 7px;
+        line-height: 10px;
+        padding: 6px 0px;
+    }
+    .learnMoreDiv {
+        width: 100px;
+        margin: 6px auto;
+    }
+}
+
+@media (max-width: 425px){
+    .rightDiv .contentDiv {
+        min-width: 150px;
+        top: 15%;
+    }
+    .contentDiv h1 {
+        font-size: 11px;
+        margin-bottom: 3px;
+    }
+    .contentDiv p {
+        font-size: 5px;
+        line-height: 7px;
+        margin-top: 3px;
+    }
+    .learnMoreButton {
+        font-size: 5px;
+        line-height: 7px;
+        padding: 4px 0px;
+    }
+    .learnMoreDiv {
+        width: 80px;
+        margin: 3px auto;
+    }
+}

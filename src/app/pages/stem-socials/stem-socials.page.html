@@ -1,0 +1,150 @@
+<div class="ttc-body">
+  <div class="stem-socials-img-div">
+    <img
+      class="stem-socials-img"
+      src="assets/images/stem-socials-page-header.jpg"
+      alt="Header Image"
+    />
+    <div class="stem-socials-header-container">
+      <div class="stem-socials-header-rectangle">
+        <div class="stem-socials-header-rectangle-text">
+          Let's Talk Tech & Education
+        </div>
+      </div>
+      <div class="stem-socials-header-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit
+        adipiscing duis suspendisse sit purus. Faucibus sodales libero integer
+        eget mauris nibh odio ullamcorper. Ac ultricies diam urna, aliquet
+        integer.
+      </div>
+    </div>
+  </div>
+
+
+  <div class="registerForEvents">
+
+    <div class="registerTextDiv">
+      <h1>Register for Events</h1>
+      <p>Check your favorite events below and complete the form to register!</p>
+    </div>
+
+    <div class="yourEventsDiv">
+      <div class="yourEventsText">
+        <p>Your Events</p>
+        <p class="eventNum">{{ selectedEvents?.length }}</p>
+      </div>
+      <ul class="yourEventsList">
+        <li *ngFor="let selectedEvent of selectedEvents">
+          <p>{{selectedEvent.eventTitle}} - {{selectedEvent.eventDay}}, {{selectedEvent.eventMonth}} {{selectedEvent.eventDate}}</p> 
+          <div class="cancelEventImgDiv"><img src="assets/images/cancelEvent.png" alt="Cancel Event"></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="registerForm">
+      <div class="singleInputs">
+        <div class="firstNameDiv">
+          <label for="firstNameInput"><p>First Name</p><p class="requiredStar">*</p></label>
+          <input id="firstNameInput" type="text">
+        </div>
+        <div class="lastNameDiv">
+          <label for="lastNameInput"><p>Last Name</p><p class="requiredStar">*</p></label>
+          <input id="lastNameInput" type="text">
+        </div>
+        <div class="emailDiv">
+          <label for="emailInput"><p>Email</p><p class="requiredStar">*</p></label>
+          <input id="emailInput" type="email">
+        </div>
+      </div>
+
+      <div class="blockInputDiv">
+        <label for="blockInput">What are you excited to learn about?</label>
+        <textarea id="blockInput"></textarea>
+      </div>
+
+      <div class="submitButtonDiv">
+        <button type="submit" class="submitButton">Submit</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <ion-segment (ionChange)="segmentChanged()" value="upcoming">
+    <ion-segment-button id="up" value="upcoming">
+      <ion-label style= "color: black;">Upcoming Events</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="previous">
+      <ion-label style= "color: black;" >Past Events</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [hidden]="ishidden" class="float-container">
+    <div *ngFor="let event of events" class="event">
+      <div
+        class="checkbox-area"
+        style="
+          flex: 1;
+          background-color: #e3ba2d;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div class="checkbox">
+          <img
+            class="checkmark"
+            src="assets/images/Vector.png"
+            alt="Checkmark"
+          />
+        </div>
+      </div>
+      <div style= "color: black;"class="body">
+        <div class="calendar-div">
+          <div class="calender">
+            <img src="assets/images/calendar.png" alt="calender Image" />
+            <p class="month">{{event.eventMonth}}</p>
+            <p class="date">{{event.eventDate}}</p>
+            <p class="day">{{event.eventDay}}</p>
+          </div>
+        </div>
+        <div class="text">
+          <h2>{{event.eventTitle}}</h2>
+          <h4>{{event.eventTime}} | {{event.eventLocation}}</h4>
+          <p>{{event.eventDescription}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  ​
+  <!-- Past Events -->
+
+  <div id="pastEvents" [hidden]="pastishidden" class="float-container">
+    <div *ngFor="let event of pastEvents" class="pastEvent">
+      <div style= "color: black;" class="body">
+        <div class="calendar-div">
+          <div class="calender">
+            <img src="assets/images/old-calendar.png" alt="calender Image" />
+            <p class="month">{{event.eventMonth}}</p>
+            <p class="date">{{event.eventDate}}</p>
+            <p class="day">{{event.eventDay}}</p>
+          </div>
+        </div>
+        <div class="text">
+          <h2>{{event.eventTitle}}</h2>
+          <h4>{{event.eventTime}} | {{event.eventLocation}}</h4>
+          <p>{{event.eventDescription}}</p>
+        </div>
+      </div>
+    </div>
+    ​
+  </div>
+  ​
+  <!-- Space -->
+  <div style="height: 200px"></div>
+
+  <app-footer></app-footer>
+</div>

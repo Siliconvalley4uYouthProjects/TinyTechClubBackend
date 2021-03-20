@@ -1,0 +1,199 @@
+
+    <div id="content">
+        <div class="text">
+          <h1>Enrichment Instructor</h1>
+          ​
+          <h2 class="eiHeader job-description">Job Descriptions</h2>
+          <p class="eiParagraph job-descriptionParagraph">
+            Teach an average of 2 to 5 classes weekly as per respective Tiny Techs
+            Club curriculum. <br />
+            Each class runs between 1-2 hours long; class size ranges from 10-20
+            students. <br />
+            Facilitate classes and engage students effectively to follow instructions.
+            <br />
+            Assist senior teachers as needed and guide students who need help building
+            robots or animations. <br />
+            Utilize computers with WeDo and SCRATCH software equipment in student
+            instruction. <br />
+            Supervise students waiting to be picked up from school and/or escort
+            students from class to daycare, as needed. <br />
+            Prepare and sort lesson plans, LEGO WeDo kits and laptops, rosters, cards,
+            and handouts before each class. <br />
+            Coordinate with Owner, Office Manager, and coworkers to share, transport,
+            and pick up laptops, kits, and handouts. <br />
+            Maintain accurate attendance records with rosters and report any student
+            absences, noteworthy incidents, and/or damaged or missing LEGO and
+            computer parts to Owner and Office Manager. <br />
+            Abide by and follow respective school rules and policies. <br />
+            Lift up to 30 lbs. of equipment (laptops, kits, etc).
+          </p>
+          ​
+          <h2 class="eiHeader qualificationsH2">Qualifications</h2>
+          <p class="eiParagraph qualificationsParagraph">
+            The ideal candidate is: <br />
+            Is flexible and available for at least 2 classes during the M-F week (Each
+            class is typically 1-2 hours long and within a 12:30 pm to 5:00 pm
+            timeframe). <br />
+            Likes working with kids. Is energetic, patient, disciplined — is able to
+            teach and handle a class of 10-20 students who are at K-5th grade level.
+            <br />
+            Knows how to use and operate Windows computers. <br />
+            Is responsible, reliable, and never late. <br />
+            Has access to reliable transportation that allows for travel from school
+            to school and can safely transport heavy equipment (ie- WeDo LEGO kits,
+            laptops, etc.). <br />
+            Communicates well with Owner, coworkers, and staff via in-person, phone,
+            text, and email Knowledge of mechanisms (eg- gears, pulleys, levers,
+            motors, etc.), as well as WeDo and SCRATCH software are pluses. <br />
+            Likes working in a fast-paced environment and can handle unexpected
+            circumstances (eg- schedule or equipment changes, etc.). <br />
+            Successfully completes a background check, fingerprint scan, and TB test
+            upon hiring.
+          </p>
+          ​
+          ​
+          <h2 class="eiHeader locationsH2">Locations</h2>
+          <p class="eiParagraph locationsParagraph">
+            We are looking for teachers who can travel to any of the following
+            assigned locations:
+          </p>
+          ​
+          
+          <h3 class="list-header">California</h3>
+          <ul class="eiParagraph list-ul">
+            <li>Berkeley/Oakland</li>
+            <li>Concord/Walnut Creek</li>
+            <li>San Ramon/Danville</li>
+            <li>San Jose/Los Gatos</li>
+          </ul>
+              ​
+          <h2 class="eiHeader hoursH2">Hours</h2>
+          <p class="eiParagraph hoursParagraph">
+            Paid teacher training takes place at various intervals throughout.
+            <br />
+            Classes take place Monday through Friday. <br />
+            Individual schedule varies. <br />
+            Paid prep time as needed for classes. <br />
+            Job Type: Part-time <br />
+            For further inquiries, feel free to email us at tinytechsjobs@gmail.com
+          </p>
+          ​
+        </div>
+        <div class="form-div">
+          
+          <div class="form-div-rectangle-text">Apply for this position</div>
+          <div class="share-text">Your full LinkedIn profile will be shared. <u>Learn More</u></div>
+          <div class="buttons-div" [ngClass]="applyButtonClicked ? 'button-mouse-down' : 'button-mouse-up' " (mousedown)="mousedownApply()" (mouseup)="mouseupApply()"> 
+              <p class="button-text">Apply with LinkedIn</p>
+          </div>
+          <div class="ur-buttons-div" [ngClass]="urButtonClicked ? 'button-mouse-down' : 'button-mouse-up' " (mousedown)="mousedownUR()" (mouseup)="mouseupUR()">
+              <img width="100%" height="100%" src="assets/images/upload.svg" class="upload-img">
+              <p class="ur-button-text">Upload Resume</p>
+          </div>
+          <form [formGroup]="enrichmentInstructorForm" (ngSubmit)="submit()">
+              <div class="form-div-1">
+                  <div class="form-div-1-inner">
+                      <div class="form-div-1-inner-body1">
+                          <div class="group-107 fname">
+                              <div class="label-div">
+                                  <p>First Name <span class="required-star">*</span>
+                                      <ng-container *ngFor="let validation of validationMessages.firstName">
+                                          <span class="error-message" *ngIf="enrichmentInstructorForm.get('firstName').hasError(validation.type) && (enrichmentInstructorForm.get('firstName').dirty || enrichmentInstructorForm.get('firstName').touched)">{{ validation.message }}</span>
+                                      </ng-container>
+                                  </p>
+                              </div>
+                              <div class="input-div">
+                                  <input type="text" formControlName="firstName" class="input" [ngClass]="{'error-border-class': enrichmentInstructorForm.get('firstName').hasError('required') && (enrichmentInstructorForm.get('firstName').dirty || enrichmentInstructorForm.get('firstName').touched)}">
+                              </div>
+                          </div>
+                          <div class="group-107 lname">
+                              <div class="label-div">
+                                  <p>Last Name <span class="required-star">*</span>
+                                      <ng-container *ngFor="let validation of validationMessages.lastName">
+                                          <span class="error-message" *ngIf="enrichmentInstructorForm.get('lastName').hasError(validation.type) && (enrichmentInstructorForm.get('lastName').dirty || enrichmentInstructorForm.get('lastName').touched)">{{ validation.message }}</span>
+                                      </ng-container>
+                                  </p>
+                              </div>
+                              <div class="input-div">
+                                  <input type="text" class="input" formControlName="lastName" [ngClass]="{'error-border-class': enrichmentInstructorForm.get('lastName').hasError('required') && (enrichmentInstructorForm.get('lastName').dirty || enrichmentInstructorForm.get('lastName').touched)}">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-div-1-inner-body2">
+                          <div class="group-107 email">
+                              <div class="label-div">
+                                  <p>Email <span class="required-star">*</span>
+                                      <ng-container *ngFor="let validation of validationMessages.email">
+                                          <span class="error-message" *ngIf="enrichmentInstructorForm.get('email').hasError(validation.type) && (enrichmentInstructorForm.get('email').dirty || enrichmentInstructorForm.get('email').touched)">{{ validation.message }}</span>
+                                      </ng-container>
+                                  </p>
+                              </div>
+                              <div class="input-div">
+                                  <input type="text" class="input" formControlName="email" [ngClass]="{'error-border-class': (enrichmentInstructorForm.get('email').hasError('required') || enrichmentInstructorForm.get('email').hasError('pattern')) && (enrichmentInstructorForm.get('email').dirty || enrichmentInstructorForm.get('email').touched)}">
+                              </div>
+                          </div>
+                          <div class="group-107 phone">
+                              <div class="label-div">
+                                  <p>Phone <span class="required-star">*</span>
+                                      <ng-container *ngFor="let validation of validationMessages.phone">
+                                          <span class="error-message" *ngIf="enrichmentInstructorForm.get('phone').hasError(validation.type) && (enrichmentInstructorForm.get('phone').dirty || enrichmentInstructorForm.get('phone').touched)">{{ validation.message }}</span>
+                                      </ng-container>
+                                  </p>
+                              </div>
+                              <div class="input-div">
+                                  <input type="text" class="input" formControlName="phone" [ngClass]="{'error-border-class': (enrichmentInstructorForm.get('phone').hasError('required') || enrichmentInstructorForm.get('phone').hasError('pattern')) && (enrichmentInstructorForm.get('phone').dirty || enrichmentInstructorForm.get('phone').touched)}">
+                              </div>
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+              <div class="form-div-2">
+                  <div class="form-div-1-inner">
+                      <div class="form-div-1-inner-body1">
+                          <div class="group-107">
+                              <div class="label-div">
+                                  <p>LinkedIn Profile</p>
+                              </div>
+                              <div class="input-div input-div2">
+                                  <ion-input type="text" class="input" formControlName="linkedIn"></ion-input>
+                              </div>
+                          </div>
+                          <div class="group-107 portfolio">
+                              <div class="label-div">
+                                  <p>Portfolio or examples of work</p>
+                              </div>
+                              <div class="input-div input-div2">
+                                  <ion-input type="text" class="input" formControlName="workExperience"></ion-input>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-div-1-inner-body2 input-div3">
+                          <div class="group-107">
+                              <div class="label-div">
+                                  <p>Work Authorization</p>
+                              </div>
+                                  <div class="custom-select-wrapper">
+                                      <div class="custom-select">
+                                          <div class="custom-select__trigger"><span>Please select</span>
+                                              <div class="arrow"><ion-icon name="chevron-down-outline"></ion-icon></div>
+                                              
+                                          </div>
+                                          <div class="custom-options">
+                                              <span class="custom-option selected" data-value="cwae"><span class="options">Can work for any employer</span></span>
+                                              <span class="custom-option" data-value="rwv"><span class="options">Requires work visa</span></span>
+                                              <span class="custom-option" data-value="osv"><span class="options">On student visa</span></span>
+                                              <span class="custom-option" data-value="ns"><span class="options">Not specified</span></span>
+                                          </div>
+                                      </div>
+                                  </div> 
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+              <button type="submit" class="submit-button">Submit</button>
+          </form>    
+      </div>
+        <app-footer></app-footer>
+      </div>

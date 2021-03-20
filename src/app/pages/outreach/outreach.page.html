@@ -1,0 +1,193 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<div class="ttc-body">
+
+  <!-- Outreach header 1 -->
+  <div class="outreach-img-div">
+    <img
+      class="outreach-img"
+      src="assets/images/Image_1.jpg"
+      alt="Header Image"
+    />
+    <div class="outreach-header-container">
+      <div class="outreach-header-rectangle">
+        <div class="outreach-header-rectangle-text">
+            Outreach Header Placeholder 1
+        </div>
+      </div>
+      <div class="outreach-header-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit
+        adipiscing duis suspendisse sit purus. Faucibus sodales libero integer
+        eget mauris nibh odio ullamcorper. Ac ultricies diam urna, aliquet
+        integer.
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- Lego Image Div -->
+  <div class="outreach2-img-div">
+    <img
+      class="outreach2-img"
+      src="assets/images/Image_2.jpg"
+      alt="LEGO Image"
+    />
+    <div class="outreach2-header-container">
+      <div class="outreach2-header-rectangle">
+        <div class="outreach2-header-rectangle-text">
+            Outreach Header Placeholder 2
+        </div>
+      </div>
+      <div class="outreach2-header-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit
+        adipiscing duis suspendisse sit purus. Faucibus sodales libero integer
+        eget mauris nibh odio ullamcorper. Ac ultricies diam urna, aliquet
+        integer.
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="form-div">
+      <div class="form-div-rectangle">
+          <div class="form-div-rectangle-text">Become a Community Partner</div>
+      </div>
+      <div class="cp-form-div">
+          <form [formGroup]="communityPartnerForm" (ngSubmit)="submit()">
+
+              <!-- First Name -->
+              <div class="input-div">
+                  <div class="form-label-div">
+                      First Name
+                      <span class="required-star">*</span>
+                  </div>
+                  <div class="input-text-field">
+                      <input type="text" formControlName="firstName" class="input-type-text" [ngClass]="{'error-border-class': communityPartnerForm.get('firstName').hasError('required') && (communityPartnerForm.get('firstName').dirty || communityPartnerForm.get('firstName').touched)}">
+                  </div>
+              </div>
+              <!-- Error Message -->
+              <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validationMessages.firstName">
+                      <div class="error-message"
+                          *ngIf="communityPartnerForm.get('firstName').hasError(validation.type) && (communityPartnerForm.get('firstName').dirty || communityPartnerForm.get('firstName').touched)">
+                          {{ validation.message }}
+                      </div>
+                  </ng-container>
+              </div>
+
+
+              <!-- Last Name -->
+              <div class="input-div" [ngClass]="(communityPartnerForm.get('firstName').hasError('required') && (communityPartnerForm.get('firstName').dirty || communityPartnerForm.get('firstName').touched)) ? 'input-type-error-gap' : 'input-type-gap'">
+                  <div class="form-label-div">
+                      Last Name
+                      <span class="required-star">*</span>
+                  </div>
+                  <div class="input-text-field">
+                      <input type="text" formControlName="lastName" class="input-type-text" [ngClass]="{'error-border-class': communityPartnerForm.get('lastName').hasError('required') && (communityPartnerForm.get('lastName').dirty || communityPartnerForm.get('lastName').touched)}">
+                  </div>
+              </div>
+              <!-- Error Message -->
+              <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validationMessages.lastName">
+                      <div class="error-message"
+                          *ngIf="communityPartnerForm.get('lastName').hasError(validation.type) && (communityPartnerForm.get('lastName').dirty || communityPartnerForm.get('lastName').touched)">
+                          {{ validation.message }}
+                      </div>
+                  </ng-container>
+              </div>
+
+
+              <!-- Email -->
+              <div class="input-div" [ngClass]="(communityPartnerForm.get('lastName').hasError('required') && (communityPartnerForm.get('lastName').dirty || communityPartnerForm.get('lastName').touched)) ? 'input-type-error-gap' : 'input-type-gap'">
+                  <div class="form-label-div">
+                      Email
+                      <span class="required-star">*</span>
+                  </div>
+                  <div class="input-text-field">
+                      <input type="text" formControlName="email" class="input-type-text" [ngClass]="{'error-border-class': (communityPartnerForm.get('email').hasError('required') || communityPartnerForm.get('email').hasError('pattern')) && (communityPartnerForm.get('email').dirty || communityPartnerForm.get('email').touched)}">
+                  </div>
+              </div>
+              <!-- Error Message -->
+              <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validationMessages.email">
+                      <div class="error-message"
+                          *ngIf="communityPartnerForm.get('email').hasError(validation.type) && (communityPartnerForm.get('email').dirty || communityPartnerForm.get('email').touched)">
+                          {{ validation.message }}
+                      </div>
+                  </ng-container>
+              </div>
+
+
+
+              <!-- Phone -->
+              <div class="input-div" [ngClass]="((communityPartnerForm.get('email').hasError('required') || communityPartnerForm.get('email').hasError('pattern')) && (communityPartnerForm.get('email').dirty || communityPartnerForm.get('email').touched)) ? 'input-type-error-gap' : 'input-type-gap'">
+                  <div class="form-label-div">
+                      Phone
+                      <span class="required-star">*</span>
+                  </div>
+                  <div class="input-text-field">
+                      <input type="text" formControlName="phone" class="input-type-text" [ngClass]="{'error-border-class': (communityPartnerForm.get('phone').hasError('required') || communityPartnerForm.get('phone').hasError('pattern')) && (communityPartnerForm.get('phone').dirty || communityPartnerForm.get('phone').touched)}">
+                  </div>
+              </div>
+              <!-- Error Message -->
+              <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validationMessages.phone">
+                      <div class="error-message"
+                          *ngIf="communityPartnerForm.get('phone').hasError(validation.type) && (communityPartnerForm.get('phone').dirty || communityPartnerForm.get('phone').touched)">
+                          {{ validation.message }}
+                      </div>
+                  </ng-container>
+              </div>
+
+
+              <!-- Company Website -->
+              <div class="input-div" [ngClass]="((communityPartnerForm.get('phone').hasError('required') || communityPartnerForm.get('phone').hasError('pattern')) && (communityPartnerForm.get('phone').dirty || communityPartnerForm.get('phone').touched)) ? 'input-type-error-gap' : 'input-type-gap'">
+                  <div class="form-label-div">
+                      Company Website
+                  </div>
+                  <div class="input-text-field">
+                      <input type="text" formControlName="companyWebsite" class="input-type-text">
+                  </div>
+              </div>
+               <div class="textarea-div">
+                  <div class="form-divider"></div>
+
+
+
+                  <!-- Message -->
+                  <div class="input-divd input-type-gap">
+                      <div class="form-label-div-textarea">
+                          Message
+                          <span class="required-star">*</span>
+                      </div>
+                  </div>
+                  <textarea type="text" formControlName="message" class="textarea-form"></textarea>
+
+                  <!-- Error Message -->
+                  <div class="validation-errors-textarea">
+                      <ng-container *ngFor="let validation of validationMessages.message">
+                          <div class="error-message"
+                              *ngIf="communityPartnerForm.get('message').hasError(validation.type) && (communityPartnerForm.get('message').dirty || communityPartnerForm.get('message').touched)">
+                              {{ validation.message }}
+                          </div>
+                      </ng-container>
+                  </div>
+                  <div class="form-divider form-divider2"></div>
+                  <button type="submit" class="submit-button">Submit</button>
+              </div>
+          </form>
+      </div>
+
+  </div>
+  <app-footer></app-footer>
+</div>

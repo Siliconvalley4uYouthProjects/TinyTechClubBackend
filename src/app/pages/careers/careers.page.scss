@@ -1,0 +1,511 @@
+.ttc-body {
+    position: relative;
+    margin-top: 152px;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    color: #000000;
+}
+
+
+
+// Header
+.careers-img-div {
+    // height: 505px;
+    width: 100%;
+    position: relative;
+  }
+  .careers-img {
+    width: 100%;
+    // min-height: 100%;
+  }
+  
+  .careers-div {
+    position: absolute;
+    width: 711px;
+    height: 176px;
+    left: calc(50% - 711px / 2);
+    top: calc(50% - 176px / 2 - 0.5px);
+    background-color: red;
+  }
+  
+  .careers-header-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: 700px;
+    height: 200px;
+  }
+  
+  .careers-header-rectangle {
+    position: absolute;
+    width: 509px;
+    height: 40px;
+    left: calc(50% - 509px / 2 + 1px);
+    // top: 181px;
+    background: var(--ion-color-TTCLime);
+    border-radius: 4px;
+  }
+  .careers-header-rectangle-text {
+    position: absolute;
+    bottom: 2px;
+    left: 8px;
+    font-family: "Poppins Bold";
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+    color: #000000;
+  }
+  .careers-header-body {
+    position: absolute;
+    width: 711px;
+    height: 176px;
+    // top: 240px;
+    top: 59px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins Regular";
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+// Content
+.list-div {
+  margin: 10px 177px;
+}
+.list-title {
+  width: 100%;
+  padding: 50px;
+  // background-color: yellow;
+}
+.list-title * {
+  display: inline;
+  position: relative;
+
+  font-family: "Poppins Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #828282;
+}
+.locationText {
+  float: right;
+}
+
+
+.list-div ul {
+  list-style: none;
+  padding: 0;
+}
+.list-div li {
+  padding: 50px 0;
+  width: 100%;
+  border-bottom: solid #BDBDBD 1px;
+}
+.list-div li * {
+  display: inline;
+}
+.jobTitle {
+  font-family: "Poppins Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: #E3BA2D;
+}
+.jobTitle.enrich:hover{
+  color: #9b7a0d;
+}
+.jobLocation {
+  float: right;
+
+  font-family: "Poppins Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+}
+
+
+@media (max-width: 900px){
+  .list-div {
+    margin: 10px 50px;
+  }
+  .list-title {
+    padding: 25px 50px;
+  }
+  .list-div li {
+    padding: 25px 0;
+  }
+}
+
+@media (max-width: 700px){
+  .jobTitle {
+    font-size: 18px;
+  }
+  .jobLocation {
+    float: right;
+  
+    font-size: 18px;
+  }
+  .list-title {
+    padding: 10px 50px;
+  }
+  .list-title * {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 475px){
+  .list-div {
+    margin: 10px 10px;
+  }
+  .jobTitle {
+    font-size: 12px;
+  }
+  .jobLocation {
+    float: right;
+  
+    font-size: 12px;
+  }
+
+  .list-title * {
+    font-size: 10px;
+  }
+}
+// .list-div{
+//     position: relative;
+//     width: 1188px;
+//     height: 549px;
+//     left: 126px;
+//     right: 126px;
+//     margin-top: 15px;
+//     margin-bottom: 168px;
+//     // overflow-x: auto;
+// }
+
+// .title{
+//     display: flex;
+//     flex-direction: row;
+    
+//     font-family: "Poppins Regular";
+//     font-size: 18px;
+//     line-height: 27px;
+//     color: var(--ion-color-TTCGray3);
+// }
+// .location{
+//     position: absolute;
+//     right: 0;
+//     width: 170px;
+// }
+// .main-list-div{
+//     display: flex;
+//     flex-direction: row;
+// }
+// .list-first{
+//     margin-top: 76px;
+// }
+// .list-others{
+//     margin-top: 101px;
+// }
+// .list-left-div{
+//     font-family: "Poppins Bold";
+//     font-size: 24px;
+//     line-height: 36px;
+//     color: var(--ion-color-TTCYellow);
+//     cursor: pointer;
+// }
+// .list-left-div:hover{
+//     font-family: "Poppins Bold";
+//     font-size: 24px;
+//     line-height: 36px;
+//     color: #000000;
+//     cursor: pointer;
+// }
+// .list-right-div{
+//     position: absolute;
+//     right: 0;
+//     width: 170px;
+//     font-family: "Poppins Regular";
+//     font-size: 24px;
+//     line-height: 36px;
+//     color: #000000;
+// }
+// .form-divider{
+//     position: absolute;
+//     border-bottom: 1px solid #BDBDBD;
+//     width: 102%;
+//     left: -1%;
+//     margin-top: 48px;
+// }
+
+// .list-div{
+//     margin-left: 10%;
+// }
+
+// .rectangle{
+//     position: absolute;
+// }
+
+// @media (max-width: 1500px)
+// {
+//     .careers-img-div{
+//         max-width: 100%;
+//         height: auto;
+//         position: relative;
+//     }
+//     .list-div{
+//         width: 70%;
+//         transform: translateX(-20%);
+//         margin-left: auto;
+//         margin-right: auto;
+        
+//     }
+//     .form-divider{
+//         margin-left: auto;
+//         margin-right: auto;
+//         width: 100%;
+//     }
+// }
+// @media (max-width: 500px)
+// {
+    
+//     .form-divider{
+//         transform: translateX(-10%);
+//     }
+//     .careers-img-div{
+//         position: relative;
+//         width: 100%;
+    
+//     }
+//     .list-div{
+//         margin-left: auto;
+//         margin-right: auto;
+//         width: 100%;
+        
+//     }
+//     .list-left-div{
+//         transform: translateX(-10%);
+//     }
+    
+
+// }
+
+// @media (max-width: 350px){
+//     .list-left-div{
+//         transform: translateX(-10%);
+//     }
+//     .list-right-div{
+//         transform: translateX(10%);
+//     }
+//     .location{
+//         transform: translateX(-10%);
+//     }
+//     .title{
+//         transform: translateX(10%);
+//     }
+
+// } 
+
+
+
+
+
+
+
+
+// Header Reactive
+@media (max-width: 750px){
+    .careers-header-rectangle {
+      position: absolute;
+      width: 400px;
+      height: 30px;
+      left: calc(50% - 400px / 2 + 1px);
+      // top: 181px;
+      background: var(--ion-color-TTCLime);
+      border-radius: 4px;
+    }
+    .careers-header-rectangle-text {
+      position: absolute;
+      bottom: 2px;
+      left: 8px;
+      font-family: "Poppins Bold";
+      font-size: 28px;
+      line-height: 44px;
+      text-align: center;
+      color: #000000;
+    }
+    .careers-header-body {
+      position: absolute;
+      width: 511px;
+      height: 156px;
+      // top: 240px;
+      top: 49px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: "Poppins Regular";
+      font-size: 16px;
+      line-height: 27px;
+      text-align: center;
+    }
+    .careers-header-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    
+      width: 700px;
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 600px){
+    .careers-header-rectangle {
+      position: absolute;
+      width: 350px;
+      //height: 20px;
+      left: calc(50% - 350px / 2 + 1px);
+      top: 5px;
+      background: var(--ion-color-TTCLime);
+      //border-radius: 4px;
+    }
+    .careers-header-rectangle-text {
+      position: absolute;
+      bottom: 2px;
+      left: 8px;
+      font-family: "Poppins Bold";
+      font-size: 24.2px;
+      line-height: 40px;
+      text-align: center;
+      color: #000000;
+    }
+    .careers-header-body {
+      position: absolute;
+      width: 450px;
+      height: 150px;
+      // top: 240px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: "Poppins Regular";
+      font-size: 14px;
+      line-height: 23px;
+      text-align: center;
+    }
+    .careers-header-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 130px;
+    }
+  }
+  
+  @media (max-width: 460px){
+    .careers-header-rectangle {
+      position: absolute;
+      width: 265px;
+      height: 24px;
+      left: calc(50% - 265px / 2 + 1px);
+      // top: 181px;
+      background: var(--ion-color-TTCLime);
+      //border-radius: 4px;
+      bottom: 70px;
+    }
+    .careers-header-rectangle-text {
+      position: absolute;
+      bottom: 2px;
+      left: 8px;
+      font-family: "Poppins Bold";
+      font-size: 18px;
+      line-height: 34px;
+      text-align: center;
+      color: #000000;
+    }
+    .careers-header-body {
+      position: absolute;
+      width: 350px;
+      height: 100px;
+      // top: 240px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: "Poppins Regular";
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+    }
+    .careers-header-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 130px;
+    }
+  }
+  
+  @media (max-width: 380px){
+    .careers-header-rectangle {
+      position: absolute;
+      width: 210px;
+      height: 20px;
+      top: 20px;
+      left: calc(50% - 210px / 2 + 1px);
+      // top: 181px;
+      background: var(--ion-color-TTCLime);
+      //border-radius: 4px;
+      //bottom: 70px;
+    }
+    .careers-header-rectangle-text {
+      position: absolute;
+      bottom: 1px;
+      left: 8px;
+      font-family: "Poppins Bold";
+      font-size: 14px;
+      line-height: 30px;
+      text-align: center;
+      color: #000000;
+    }
+    .careers-header-body {
+      position: absolute;
+      width: 300px;
+      height: 100px;
+      // top: 240px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: "Poppins Regular";
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+    }
+    .careers-header-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 140px;
+    }
+  }

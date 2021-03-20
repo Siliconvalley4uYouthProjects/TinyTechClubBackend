@@ -68,12 +68,78 @@
   --ion-color-medium-tint: #9d9fa6;
 
   /** light **/
-  --ion-color-light: #f4f5f8;
+  --ion-color-light: #000000;
   --ion-color-light-rgb: 244, 245, 248;
   --ion-color-light-contrast: #000000;
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** TTC Lime **/
+  --ion-color-TTCLime: #DAE84D;
+  --ion-color-TTCLime-rgd: 218, 232, 77;
+  --ion-color-TTCLime-contrast: #DAE84D;
+  --ion-color-TTCLime-contrast-rgb: 218, 232, 77;
+  --ion-color-TTCLime-shade: #DAE84D;
+  --ion-color-TTCLime-tint: #DAE84D;
+
+  /** TTC Lime Click **/
+  --ion-color-TTCLimeClick: #E6F550;
+  --ion-color-TTCLimeClick-rgd: 230, 245, 80;
+  --ion-color-TTCLimeClick-contrast: #E6F550;
+  --ion-color-TTCLimeClick-contrast-rgb: 230, 245, 80;
+  --ion-color-TTCLimeClick-shade: #E6F550;
+  --ion-color-TTCLimeClick-tint: #E6F550;
+
+  /** TTC Yellow **/
+  --ion-color-TTCYellow: #E3BA2D;
+  --ion-color-TTCYellow-rgd: 227, 186, 45;
+  --ion-color-TTCYellow-contrast: #E3BA2D;
+  --ion-color-TTCYellow-contrast-rgb: 227, 186, 45;
+  --ion-color-TTCYellow-shade: #E3BA2D;
+  --ion-color-TTCYellow-tint: #E3BA2D;
+
+  /** TTC Gray 2 **/
+  --ion-color-TTCGray2: #4F4F4F;
+  --ion-color-TTCGray2-rgb: 79, 79, 79;
+  --ion-color-TTCGray2-contrast: #4F4F4F;
+  --ion-color-TTCGray2-contrast-rgb: 79, 79, 79;
+  --ion-color-TTCGray2-shade: #4F4F4F;
+  --ion-color-TTCGray2-tint: #4F4F4F;
+
+  /** TTC Gray 3 **/
+  --ion-color-TTCGray3: #828282;
+  --ion-color-TTCGray3-rgb: 130, 130, 130;
+  --ion-color-TTCGray3-contrast: #828282;
+  --ion-color-TTCGray3-contrast-rgb: 130, 130, 130;
+  --ion-color-TTCGray3-shade: #828282;
+  --ion-color-TTCGray3-tint: #828282;
+
+  /** TTC Gray 5 **/
+  --ion-color-TTCGray5: #DAE84D;
+  --ion-color-TTCGray5-rgb: 224, 224, 224;
+  --ion-color-TTCGray5-contrast: #DAE84D;
+  --ion-color-TTCGray5-contrast-rgb: 224, 224, 224;
+  --ion-color-TTCGray5-shade: #DAE84D;
+  --ion-color-TTCGray5-tint: #DAE84D;
+
+  /** TTC Black **/
+  --ion-color-TTCBlack: #000000;
+  --ion-color-TTCBlack-rgb: 0, 0, 0;
+  --ion-color-TTCBlack-contrast: #000000;
+  --ion-color-TTCBlack-contrast-rgb: 0, 0, 0;
+  --ion-color-TTCBlack-shade: #000000;
+  --ion-color-TTCBlack-tint: #000000;
+
+  /** TTC White **/
+  --ion-color-TTCWhite: #FFFFFF;
+  --ion-color-TTCWhite-rgb: 255, 255, 255;
+  --ion-color-TTCWhite-contrast: #FFFFFF;
+  --ion-color-TTCWhite-contrast-rgb: 255, 255, 255;
+  --ion-color-TTCWhite-shade: #FFFFFF;
+  --ion-color-TTCWhite-tint: #FFFFFF;
+
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -145,6 +211,71 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
+    /** TTC Lime **/
+    --ion-color-TTCLime: #DAE84D;
+    --ion-color-TTCLime-rgb: 218, 232, 77;
+    --ion-color-TTCLime-contrast: #DAE84D;
+    --ion-color-TTCLime-contrast-rgb: 218, 232, 77;
+    --ion-color-TTCLime-shade: #DAE84D;
+    --ion-color-TTCLime-tint: #DAE84D;
+
+    /** TTC Lime Click **/
+    --ion-color-TTCLimeClick: #E6F550;
+    --ion-color-TTCLimeClick-rgd: 230, 245, 80;
+    --ion-color-TTCLimeClick-contrast: #E6F550;
+    --ion-color-TTCLimeClick-contrast-rgb: 230, 245, 80;
+    --ion-color-TTCLimeClick-shade: #E6F550;
+    --ion-color-TTCLimeClick-tint: #E6F550;
+
+    /** TTC Yellow **/
+    --ion-color-TTCYellow: #E3BA2D;
+    --ion-color-TTCYellow-rgd: 227, 186, 45;
+    --ion-color-TTCYellow-contrast: #E3BA2D;
+    --ion-color-TTCYellow-contrast-rgb: 227, 186, 45;
+    --ion-color-TTCYellow-shade: #E3BA2D;
+    --ion-color-TTCYellow-tint: #E3BA2D;
+
+    /** TTC Gray 2 **/
+    --ion-color-TTCGray2: #4F4F4F;
+    --ion-color-TTCGray2-rgb: 79, 79, 79;
+    --ion-color-TTCGray2-contrast: #4F4F4F;
+    --ion-color-TTCGray2-contrast-rgb: 79, 79, 79;
+    --ion-color-TTCGray2-shade: #4F4F4F;
+    --ion-color-TTCGray2-tint: #4F4F4F;
+
+    /** TTC Gray 3 **/
+    --ion-color-TTCGray3: #828282;
+    --ion-color-TTCGray3-rgb: 130, 130, 130;
+    --ion-color-TTCGray3-contrast: #828282;
+    --ion-color-TTCGray3-contrast-rgb: 130, 130, 130;
+    --ion-color-TTCGray3-shade: #828282;
+    --ion-color-TTCGray3-tint: #828282;
+
+    /** TTC Gray 5 **/
+    --ion-color-TTCGray5: #DAE84D;
+    --ion-color-TTCGray5-rgb: 224, 224, 224;
+    --ion-color-TTCGray5-contrast: #DAE84D;
+    --ion-color-TTCGray5-contrast-rgb: 224, 224, 224;
+    --ion-color-TTCGray5-shade: #DAE84D;
+    --ion-color-TTCGray5-tint: #DAE84D;
+
+    /** TTC Black **/
+    --ion-color-TTCBlack: #000000;
+    --ion-color-TTCBlack-rgb: 0, 0, 0;
+    --ion-color-TTCBlack-contrast: #000000;
+    --ion-color-TTCBlack-contrast-rgb: 0, 0, 0;
+    --ion-color-TTCBlack-shade: #000000;
+    --ion-color-TTCBlack-tint: #000000;
+
+    /** TTC White **/
+    --ion-color-TTCWhite: #FFFFFF;
+    --ion-color-TTCWhite-rgb: 255, 255, 255;
+    --ion-color-TTCWhite-contrast: #FFFFFF;
+    --ion-color-TTCWhite-contrast-rgb: 255, 255, 255;
+    --ion-color-TTCWhite-shade: #FFFFFF;
+    --ion-color-TTCWhite-tint: #FFFFFF;
+
   }
 
   /*
@@ -186,12 +317,6 @@
     --ion-card-background: #1c1c1d;
   }
 
-  .ios ion-modal {
-    --ion-background-color: var(--ion-color-step-100);
-    --ion-toolbar-background: var(--ion-color-step-150);
-    --ion-toolbar-border-color: var(--ion-color-step-250);
-  }
-
 
   /*
    * Material Design Dark Theme
@@ -199,10 +324,10 @@
    */
 
   .md body {
-    --ion-background-color: #121212;
+    --ion-background-color: #ffffff;
     --ion-background-color-rgb: 18,18,18;
 
-    --ion-text-color: #ffffff;
+    --ion-text-color: #000000;
     --ion-text-color-rgb: 255,255,255;
 
     --ion-border-color: #222222;
@@ -227,12 +352,85 @@
     --ion-color-step-900: #e7e7e7;
     --ion-color-step-950: #f3f3f3;
 
-    --ion-item-background: #1e1e1e;
+    --ion-item-background: #ffffff;
 
-    --ion-toolbar-background: #1f1f1f;
+    --ion-toolbar-background: #ffffff;
 
-    --ion-tab-bar-background: #1f1f1f;
+    --ion-tab-bar-background: #ffffff;
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+
+.ion-color-TTCLime {
+  --ion-color-base: var(--ion-color-TTCLime);
+  --ion-color-base-rgb: var(--ion-color-TTCLime-rgb);
+  --ion-color-contrast: var(--ion-color-TTCLime-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-TTCLime-contrast-rgb);
+  --ion-color-shade: var(--ion-color-TTCLime-shade);
+  --ion-color-tint: var(--ion-color-TTCLime-tint);
+}
+
+.ion-color-TTCLimeClick {
+  --ion-color-base: var(--ion-color-TTCLimeClick);
+  --ion-color-base-rgb: var(--ion-color-TTCLimeClick-rgb);
+  --ion-color-contrast: var(--ion-color-TTCLimeClick-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-TTCLimeClick-contrast-rgb);
+  --ion-color-shade: var(--ion-color-TTCLimeClick-shade);
+  --ion-color-tint: var(--ion-color-TTCLimeClick-tint);
+}
+
+.ion-color-TTCYellow {
+  --ion-color-base: var(--ion-color-TTCYellow);
+  --ion-color-base-rgb: var(--ion-color-TTCYellow-rgb);
+  --ion-color-contrast: var(--ion-color-TTCYellow-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-TTCYellow-contrast-rgb);
+  --ion-color-shade: var(--ion-color-TTCYellow-shade);
+  --ion-color-tint: var(--ion-color-TTCYellow-tint);
+}
+
+.ion-color-TTCGray2{
+  --ion-color-base: var(--ion-color-TTCGray2);
+  --ion-color-base-rgb: var(--ion-color-TTCGray2-rgb);
+  --ion-color-contrast: var(--ion-color-TTCGray2-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-TTCGray2-contrast-rgb);
+  --ion-color-shade: var(--ion-color-TTCGray2-shade);
+  --ion-color-tint: var(--ion-color-TTCGray2-tint);
+}
+
+.ion-color-TTCGray3{
+  --ion-color-base: var(--ion-color-TTCGray3);
+  --ion-color-base-rgb: var(--ion-color-TTCGray3-rgb);
+  --ion-color-contrast: var(--ion-color-TTCGray3-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-TTCGray3-contrast-rgb);
+  --ion-color-shade: var(--ion-color-TTCGray3-shade);
+  --ion-color-tint: var(--ion-color-TTCGray3-tint);
+}
+
+.ion-color-TTCGray5{
+  --ion-color-base: var(--ion-color-TTCGray5);
+  --ion-color-base-rgb: var(--ion-color-TTCGray5-rgb);
+  --ion-color-contrast: var(--ion-color-TTCGray5-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-TTCGray5-contrast-rgb);
+  --ion-color-shade: var(--ion-color-TTCGray5-shade);
+  --ion-color-tint: var(--ion-color-TTCGray5-tint);
+}
+
+.ion-color-TTCBlack{
+  --ion-color-base: var(--ion-color-TTCBlack);
+  --ion-color-base-rgb: var(--ion-color-TTCBlack-rgb);
+  --ion-color-contrast: var(--ion-color-TTCBlack-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-TTCBlack-contrast-rgb);
+  --ion-color-shade: var(--ion-color-TTCBlack-shade);
+  --ion-color-tint: var(--ion-color-TTCBlack-tint);
+}
+
+.ion-color-TTCWhite{
+  --ion-color-base: var(--ion-color-TTCWhite);
+  --ion-color-base-rgb: var(--ion-color-TTCWhite-rgb);
+  --ion-color-contrast: var(--ion-color-TTCWhite-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-TTCWhite-contrast-rgb);
+  --ion-color-shade: var(--ion-color-TTCWhite-shade);
+  --ion-color-tint: var(--ion-color-TTCWhite-tint);
 }

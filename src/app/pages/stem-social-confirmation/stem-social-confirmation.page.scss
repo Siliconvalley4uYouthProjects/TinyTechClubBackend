@@ -1,0 +1,877 @@
+.ttc-body {
+    position: relative;
+    margin-top: 152px;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+  }
+
+.confirmationtitle{
+    text-align: center;
+    font-family: "Poppins Bold";
+    font-size: 36pt;
+    color: #000000;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.confirmationsubtitle{
+    text-align: center;
+    font-family: "Poppins Regular";
+    font-size: 18pt;
+    margin-top: 15px;
+    margin-bottom: 13px;
+    margin-right: 550px;
+    margin-left: 550px;
+}
+
+.googlecalendar{
+    width: 65px;
+    height: 65px;
+    border: 1px solid;
+    border-color: rgb(224,224,224);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.addcalendar{
+    font-family: "Poppins Regular";
+    font-size: 18pt;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 17.5px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-item {
+    display: inline-block;
+    text-align: center;
+}
+
+.bottomgridcontainer {
+    margin-top: 75px;
+    margin-bottom: 200px;
+    margin-right: 0px;
+    margin-left: 180px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.bottomgriditem {
+    height: auto;
+    text-align: center;
+    margin: 0px;
+}
+
+.calendarbackground{
+     float: left;
+     border-radius: 10px;
+     height: 175px;
+     width: 515px;
+}
+
+.calendarimage{
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 180px;
+    size: 100%;
+}
+
+.calendareventgroup{
+     margin: 20px;
+     margin-left: 40px;
+}
+
+.calendareventtitle{
+     text-align: left;
+     margin: 0px;
+     font-family: "Poppins Bold";
+     font-size: 18pt;
+     margin-bottom: 5px;
+}
+
+.calendareventdetail{
+     text-align: left;
+     margin: 0px;
+     font-family: "Poppins Regular";
+     font-size: 14pt;
+}
+
+.calendareventmonth{
+     text-align: center;
+     position: absolute;
+     font-family: "Poppins Bold";
+     font-size: 18pt;
+     color: white;
+     margin-left: 482.5px;
+}
+
+.calendareventdate{
+    text-align: center;
+    position: absolute;
+    font-family: "Poppins Bold";
+    font-size: 36pt;
+    margin-top: 60px;
+}
+
+.calendareventday{
+    text-align: center;
+    position: absolute;
+    font-family: "Poppins Regular";
+    font-size: 14pt;
+    color: rgb(130,130,130);
+    margin-left: 480px;
+    margin-top: 115px;
+}
+
+.topleftnum{
+    margin-left:480px;
+    text-align: center;
+    position: absolute;
+    font-family: "Poppins Bold";
+    font-size: 36pt;
+    margin-top: 60px;
+}
+.toprightnum{
+    margin-left: 495px;
+    text-align: center;
+    position: absolute;
+    font-family: "Poppins Bold";
+    font-size: 36pt;
+    margin-top: 60px;
+}
+.botleftnum, .botrightnum{
+    margin-left: 485px;
+    text-align: center;
+    position: absolute;
+    font-family: "Poppins Bold";
+    font-size: 36pt;
+    margin-top: 60px;
+}
+#topleft, #botleft{
+    margin-right: 75px;
+}
+
+#topleft, #topright{
+    margin-bottom: 34px;
+}
+
+@media(min-width: 300px){
+    .confirmationsubtitle{
+        margin-right: 35px;
+        margin-left: 35px;
+        font-size: 10pt;
+    }
+    .bottomgridcontainer{
+        margin-left: 20px;
+        margin-top: 35px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .calendarbackground{
+        width: 225px;
+        height: 110px;
+    }
+    .calendareventmonth{
+        font-size: 12pt;
+        margin-left: 210px;
+    }
+    .calendareventday{
+        font-size: 8pt;
+        margin-left: 210.5px;
+        margin-top: 72.5px;
+    }
+    .calendarimage{
+        margin-left: 75px;
+        height: 81.45px;
+        width: 75px;
+    }
+    .topleftnum{
+        font-size: 28pt;
+        margin-left: 205px;
+        margin-top: 31.5px;
+    }
+    .toprightnum{
+        font-size: 28pt;
+        margin-left: 217.5px;
+        margin-top: 31.5px;
+    }
+    .botleftnum, .botrightnum{
+        font-size: 28pt;
+        margin-left: 210px;
+        margin-top: 31.5px;
+    }
+    #topleft, #botleft{
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    .calendareventgroup{
+        margin-left: 17px;
+        margin-top: 10px;
+    }
+    .addcalendar{
+        font-size: 11pt;
+    }
+    .confirmationtitle{
+        font-size: 25pt;
+    }
+    .calendareventtitle{
+        font-size: 13pt;
+    }
+    .calendareventdetail{
+        font-size: 9pt;
+    }
+    #topleft, #topright{
+        margin-bottom: 0px;
+    }
+    .googlecalendar{
+        height: 55px;
+        width: 55px;
+        padding: 7px;
+    }
+    .bottomgriditem {
+        margin: 10px;
+    }
+}
+
+@media(min-width: 336px){
+    .confirmationsubtitle{
+        margin-right: 35px;
+        margin-left: 35px;
+        font-size: 10pt;
+    }
+    .bottomgridcontainer{
+        margin-left: 30px;
+        margin-top: 35px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .calendarbackground{
+        width: 225px;
+        height: 110px;
+    }
+    .calendareventmonth{
+        font-size: 12pt;
+        margin-left: 220px;
+    }
+    .calendareventday{
+        font-size: 8pt;
+        margin-left: 220.5px;
+        margin-top: 72.5px;
+    }
+    .calendarimage{
+        margin-left: 85px;
+        height: 81.45px;
+        width: 75px;
+    }
+    .topleftnum{
+        font-size: 28pt;
+        margin-left: 215px;
+        margin-top: 31.5px;
+    }
+    .toprightnum{
+        font-size: 28pt;
+        margin-left: 227.5px;
+        margin-top: 31.5px;
+    }
+    .botleftnum, .botrightnum{
+        font-size: 28pt;
+        margin-left: 220px;
+        margin-top: 31.5px;
+    }
+    #topleft, #botleft{
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    .calendareventgroup{
+        margin-left: 17px;
+        margin-top: 10px;
+    }
+    .addcalendar{
+        font-size: 11pt;
+    }
+    .confirmationtitle{
+        font-size: 25pt;
+    }
+    .calendareventtitle{
+        font-size: 13pt;
+    }
+    .calendareventdetail{
+        font-size: 9pt;
+    }
+    #topleft, #topright{
+        margin-bottom: 0px;
+    }
+    .googlecalendar{
+        height: 55px;
+        width: 55px;
+        padding: 7px;
+    }
+    .bottomgriditem {
+        margin: 10px;
+    }
+}
+
+@media(min-width: 400px){
+    .confirmationsubtitle{
+        margin-right: 55px;
+        margin-left: 55px;
+        font-size: 11pt;
+    }
+    .bottomgridcontainer{
+        margin-left: 3px;
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .calendarbackground{
+        width: 175px;
+        height: 110px;
+    }
+    .calendareventmonth{
+        font-size: 12pt;
+        margin-left: 145px;
+    }
+    .calendareventday{
+        font-size: 8pt;
+        margin-left: 145.5px;
+        margin-top: 72.5px;
+    }
+    .calendarimage{
+        margin-left: 35px;
+        height: 81.45px;
+        width: 75px;
+    }
+    .topleftnum{
+        font-size: 28pt;
+        margin-left: 140px;
+        margin-top: 31.5px;
+    }
+    .toprightnum{
+        font-size: 28pt;
+        margin-left: 155px;
+        margin-top: 31.5px;
+    }
+    .botleftnum, .botrightnum{
+        font-size: 28pt;
+        margin-left: 145px;
+        margin-top: 31.5px;
+    }
+    #topleft, #botleft{
+        margin-right: 0px;
+    }
+    .calendareventgroup{
+        margin-left: 17px;
+        margin-top: 10px;
+    }
+    .addcalendar{
+        font-size: 11pt;
+    }
+    .confirmationtitle{
+        font-size: 26pt;
+    }
+    .calendareventtitle{
+        font-size: 13pt;
+    }
+    .calendareventdetail{
+        font-size: 9pt;
+    }
+    #topleft, #topright{
+        margin-bottom: 0px;
+    }
+    .bottomgridcontainer{
+        margin-bottom: 100px;
+    }
+    .googlecalendar{
+        height: 55px;
+        width: 55px;
+        padding: 7px;
+    }
+    .bottomgriditem {
+        margin: 10px;
+    }
+}
+
+@media(min-width: 436px){
+    .confirmationsubtitle{
+        margin-right: 55px;
+        margin-left: 55px;
+        font-size: 11pt;
+    }
+    .bottomgridcontainer{
+        margin-left: 15px;
+        margin-top: 35px;
+    }
+    .calendarbackground{
+        width: 175px;
+        height: 125px;
+    }
+    .calendareventmonth{
+        font-size: 12pt;
+        margin-left: 157.5px;
+    }
+    .calendareventday{
+        font-size: 8pt;
+        margin-left: 157.5px;
+        margin-top: 75px;
+    }
+    .calendarimage{
+        margin-left: 45px;
+        height: 86.88px;
+        width: 80px;
+    }
+    .topleftnum{
+        font-size: 28pt;
+        margin-left: 152.5px;
+        margin-top: 35px;
+    }
+    .toprightnum{
+        font-size: 28pt;
+        margin-left: 167.5px;
+        margin-top: 35px;
+    }
+    .botleftnum, .botrightnum{
+        font-size: 28pt;
+        margin-left: 157.5px;
+        margin-top: 35px;
+    }
+    #topleft, #botleft{
+        margin-right: 0px;
+    }
+    .calendareventgroup{
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .addcalendar{
+        font-size: 11pt;
+    }
+    .confirmationtitle{
+        font-size: 26pt;
+    }
+    .calendareventtitle{
+        font-size: 14pt;
+    }
+    .calendareventdetail{
+        font-size: 10pt;
+    }
+    #topleft, #topright{
+        margin-bottom: 0px;
+    }
+    .bottomgridcontainer{
+        margin-bottom: 100px;
+    }
+    .googlecalendar{
+        height: 55px;
+        width: 55px;
+        padding: 7px;
+    }
+    .bottomgriditem {
+        margin: 15px;
+    }
+}
+
+@media(min-width: 500px){
+    .confirmationsubtitle{
+        margin-right: 75px;
+        margin-left: 75px;
+        font-size: 12pt;
+    }
+    .bottomgridcontainer{
+        margin-left: 15px;
+        margin-top: 35px;
+    }
+    .calendarbackground{
+        width: 200px;
+        height: 125px;
+    }
+    .calendareventmonth{
+        font-size: 14pt;
+        margin-left: 177.5px;
+    }
+    .calendareventday{
+        font-size: 10pt;
+        margin-left: 177.5px;
+        margin-top: 95px;
+    }
+    .calendarimage{
+        margin-left: 45px;
+        height: 108.6px;
+        width: 100px;
+    }
+    .topleftnum{
+        font-size: 30pt;
+        margin-left: 172.5px;
+        margin-top: 45px;
+    }
+    .toprightnum{
+        font-size: 30pt;
+        margin-left: 187.5px;
+        margin-top: 45px;
+    }
+    .botleftnum, .botrightnum{
+        font-size: 30pt;
+        margin-left: 177.5px;
+        margin-top: 45px;
+    }
+    #topleft, #botleft{
+        margin-right: 0px;
+    }
+    .calendareventgroup{
+        margin-left: 20px;
+    }
+    .addcalendar{
+        font-size: 12pt;
+    }
+    .confirmationtitle{
+        font-size: 28pt;
+    }
+    .calendareventtitle{
+        font-size: 14pt;
+    }
+    .calendareventdetail{
+        font-size: 10pt;
+    }
+    .calendareventgroup{
+        margin-top: 15px;
+    }
+    #topleft, #topright{
+        margin-bottom: 0px;
+    }
+    .bottomgridcontainer{
+        margin-bottom: 100px;
+    }
+    .googlecalendar{
+        height: 65px;
+        width: 65px;
+        padding: 10px;
+    }
+    .bottomgriditem {
+        margin: 20px;
+    }
+}
+
+@media(min-width: 600px){
+    .confirmationsubtitle{
+        margin-right: 100px;
+        margin-left: 100px;
+        font-size: 14pt;
+    }
+    .bottomgridcontainer{
+        margin-left: 15px;
+        margin-top: 35px;
+    }
+    .calendarbackground{
+        width: 250px;
+        height: 125px;
+    }
+    .calendareventmonth{
+        font-size: 14pt;
+        margin-left: 217.5px;
+    }
+    .calendareventday{
+        font-size: 10pt;
+        margin-left: 217.5px;
+        margin-top: 95px;
+    }
+    .calendarimage{
+        margin-left: 60px;
+        height: 108.6px;
+        width: 100px;
+    }
+    .topleftnum{
+        font-size: 32pt;
+        margin-left: 212.5px;
+        margin-top: 45px;
+    }
+    .toprightnum{
+        font-size: 32pt;
+        margin-left: 227.5px;
+        margin-top: 45px;
+    }
+    .botleftnum, .botrightnum{
+        font-size: 32pt;
+        margin-left: 217.5px;
+        margin-top: 45px;
+    }
+    #topleft, #botleft{
+        margin-right: 35px;
+    }
+    .calendareventgroup{
+        margin-left: 20px;
+    }
+    .addcalendar{
+        font-size: 14pt;
+    }
+    .confirmationtitle{
+        font-size: 30pt;
+    }
+    .calendareventtitle{
+        font-size: 14pt;
+    }
+    .calendareventdetail{
+        font-size: 10pt;
+    }
+    .calendareventgroup{
+        margin-top: 15px;
+    }
+    #topleft, #topright{
+        margin-bottom: 0px;
+    }
+    .bottomgridcontainer{
+        height: 350px;
+        margin-bottom: 200px;
+    }
+    .bottomgriditem {
+        margin: 0px;
+    }
+}
+
+@media(min-width: 700px){
+    .confirmationsubtitle{
+        margin-right: 100px;
+        margin-left: 100px;
+        font-size: 18pt;
+    }
+    .bottomgridcontainer{
+        margin-left: 45px;
+        margin-top: 75px;
+    }
+    .calendarbackground{
+        width: 250px;
+        height: 175px;
+    }
+    .calendareventmonth{
+        font-size: 18pt;
+        margin-left: 232.5px;
+    }
+    .calendareventday{
+        font-size: 14pt;
+        margin-left: 230px;
+        margin-top: 115px;
+    }
+    .calendarimage{
+        margin-left: 60px;
+        height: 151px;
+        width: 139px;
+    }
+    .topleftnum{
+        font-size: 36pt;
+        margin-left: 230px;
+        margin-top: 60px;
+    }
+    .toprightnum{
+        font-size: 36pt;
+        margin-left: 245px;
+        margin-top: 60px;
+    }
+    .botleftnum, .botrightnum{
+        font-size: 36pt;
+        margin-left: 235px;
+        margin-top: 60px;
+    }
+    #topleft, #botleft{
+        margin-right: 35px;
+    }
+    .calendareventgroup{
+        margin-left: 20px;
+    }
+    .addcalendar{
+        font-size: 18pt;
+    }
+    .confirmationtitle{
+        font-size:36pt;
+    }
+    .calendareventtitle{
+        font-size: 18pt;
+    }
+    .calendareventdetail{
+        font-size: 14pt;
+    }
+    .calendareventgroup{
+        margin-top: 20px;
+    }
+    #topleft, #topright{
+        margin-bottom: 34px;
+    }
+}
+
+@media(min-width: 900px){
+    .confirmationsubtitle{
+        margin-right: 150px;
+        margin-left: 150px;
+    }
+    .bottomgridcontainer{
+        margin-left: 50px;
+    }
+    .calendarbackground{
+        width: 300px;
+    }
+    .calendareventmonth{
+        margin-left: 267.5px;
+    }
+    .calendareventday{
+        margin-left: 265px;
+    }
+    .calendarimage{
+        margin-left: 75px;
+    }
+    .topleftnum{
+        margin-left: 265px;
+    }
+    .toprightnum{
+        margin-left: 280px;
+    }
+    .botleftnum, .botrightnum{
+        margin-left: 270px;
+    }
+    #topleft, #botleft{
+        margin-right: 35px;
+    }
+    .calendareventgroup{
+        margin-left: 40px;
+    }
+}
+
+@media(min-width: 1100px){
+    .confirmationsubtitle{
+        margin-right: 250px;
+        margin-left: 250px;
+    }
+    .bottomgridcontainer{
+        margin-left: 100px;
+    }
+    .calendarbackground{
+        width: 400px;
+    }
+    .calendareventmonth{
+        margin-left: 367.5px;
+    }
+    .calendareventday{
+        margin-left: 365px;
+    }
+    .calendarimage{
+        margin-left: 125px;
+    }
+    .topleftnum{
+        margin-left: 365px;
+    }
+    .toprightnum{
+        margin-left: 380px;
+    }
+    .botleftnum, .botrightnum{
+        margin-left: 370px;
+    }
+    #topleft, #botleft{
+        margin-right: 35px;
+    }
+}
+
+@media(min-width: 1350px){
+    .confirmationsubtitle{
+        margin-right: 350px;
+        margin-left: 350px;
+    }
+    .bottomgridcontainer{
+        margin-left: 75px;
+    }
+    .calendarbackground{
+        width: 515px;
+    }
+    .calendareventmonth{
+        margin-left: 482.5px;
+    }
+    .calendareventday{
+        margin-left: 480px;
+    }
+    .calendarimage{
+        margin-left: 180px;
+    }
+    .topleftnum{
+        margin-left:480px;
+    }
+    .toprightnum{
+        margin-left: 495px;
+    }
+    .botleftnum, .botrightnum{
+        margin-left: 485px;
+    }
+    #topleft, #botleft{
+        margin-right: 75px;
+    }
+}
+
+@media(min-width: 1450px){
+    .confirmationsubtitle{
+        margin-right: 400px;
+        margin-left: 400px
+    }
+    .bottomgridcontainer{
+        margin-left: 100px;
+    }
+    .calendarbackground{
+        width: 515px;
+    }
+    .calendareventmonth{
+        margin-left: 482.5px;
+    }
+    .calendareventday{
+        margin-left: 480px;
+    }
+    .calendarimage{
+        margin-left: 180px;
+    }
+    .topleftnum{
+        margin-left:480px;
+    }
+    .toprightnum{
+        margin-left: 495px;
+    }
+    .botleftnum, .botrightnum{
+        margin-left: 485px;
+    }
+    #topleft, #botleft{
+        margin-right: 75px;
+    }
+}
+
+@media(min-width: 1550px){
+    .confirmationsubtitle{
+        margin-right: 550px;
+        margin-left: 550px;
+    }
+    .bottomgridcontainer{
+        margin-left: 180px;
+    }
+    .calendarbackground{
+        width: 515px;
+    }
+    .calendareventmonth{
+        margin-left: 482.5px;
+    }
+    .calendareventday{
+        margin-left: 480px;
+    }
+    .calendarimage{
+        margin-left: 180px;
+    }
+    .topleftnum{
+        margin-left:480px;
+    }
+    .toprightnum{
+        margin-left: 495px;
+    }
+    .botleftnum, .botrightnum{
+        margin-left: 485px;
+    }
+    #topleft, #botleft{
+        margin-right: 75px;
+    }
+}

@@ -1,0 +1,169 @@
+.container {
+    position: relative;
+    display: flex;
+}
+
+.rightDiv {
+    flex: 12;
+}
+.rightDiv img {
+    width: 100%;
+}
+
+.leftDiv {
+    flex: 17;
+    background-color: #83A4FF;
+}
+.leftDiv .contentDiv {
+    min-width: 480px;
+    width: 55%;
+    margin: auto;
+    position: relative;
+    top: 25%;
+}
+.contentDiv h1,
+.contentDiv p {
+    text-align: center;
+}
+.contentDiv h1 {
+    font-family: "Poppins Bold";
+    font-size: 36px;
+    margin-top: 0;
+}
+.contentDiv p {
+    font-family: "Poppins Regular";
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 0;
+}
+
+.registerNowDiv {
+    width: 250px;
+    margin: 50px auto;
+}
+.registerNowButton {
+    width: 100%;
+
+    font-size: 18px;
+    text-align: center;
+
+    background-color:  var(--ion-color-TTCLime);
+    padding: 20px 0px;
+}
+
+
+@media (max-width: 1207px){
+    .leftDiv .contentDiv {
+        min-width: 470px;
+        top: 20%;
+    }
+    .contentDiv h1 {
+        font-size: 30px;
+    }
+    .contentDiv p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .registerNowButton {
+        font-size: 14px;
+        line-height: 25px;
+        padding: 10px 0px;
+    }
+    .registerNowDiv {
+        width: 200px;
+        margin: 25px auto;
+    }
+}
+@media (max-width: 939px){
+    .leftDiv .contentDiv {
+        min-width: 350px;
+        top: 15%;
+    }
+    .contentDiv h1 {
+        font-size: 25px;
+    }
+    .contentDiv p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .registerNowButton {
+        font-size: 12x;
+        line-height: 20px;
+        padding: 10px 0px;
+    }
+    .registerNowDiv {
+        width: 170px;
+        margin: 20px auto;
+    }
+}
+@media (max-width: 681px){
+    .leftDiv .contentDiv {
+        min-width: 270px;
+        top: 15%;
+    }
+    .contentDiv h1 {
+        font-size: 18px;
+    }
+    .contentDiv p {
+        font-size: 9px;
+        line-height: 15px;
+    }
+    .registerNowButton {
+        font-size: 9px;
+        line-height: 15px;
+        padding: 7px 0px;
+    }
+    .registerNowDiv {
+        width: 120px;
+        margin: 17px auto;
+    }
+}
+@media (max-width: 510px){
+    .leftDiv .contentDiv {
+        min-width: 200px;
+        top: 15%;
+    }
+    .contentDiv h1 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .contentDiv p {
+        font-size: 7px;
+        line-height: 10px;
+        margin-top: 5px;
+    }
+    .registerNowButton {
+        font-size: 7px;
+        line-height: 10px;
+        padding: 6px 0px;
+    }
+    .registerNowDiv {
+        width: 100px;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 397px){
+    .leftDiv .contentDiv {
+        min-width: 150px;
+        top: 15%;
+    }
+    .contentDiv h1 {
+        font-size: 11px;
+        margin-bottom: 3px;
+    }
+    .contentDiv p {
+        font-size: 5px;
+        line-height: 7px;
+        margin-top: 3px;
+    }
+    .registerNowButton {
+        font-size: 5px;
+        line-height: 7px;
+        padding: 4px 0px;
+    }
+    .registerNowDiv {
+        width: 80px;
+        margin: 5px auto;
+    }
+}
