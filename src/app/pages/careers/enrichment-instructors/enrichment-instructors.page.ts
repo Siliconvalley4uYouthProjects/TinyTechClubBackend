@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { AngularFireStorage } from '@angular/fire/storage';
 ​
 @Component({
   selector: 'app-enrichment-instructors',
@@ -28,7 +29,10 @@ export class EnrichmentInstructorsPage implements OnInit, AfterViewInit {
 ​
   applyButtonClicked: boolean;
   urButtonClicked: boolean;
-  constructor(private formBuilder: FormBuilder, private elementRef: ElementRef) { }
+  constructor(
+    private formBuilder: FormBuilder, 
+    private elementRef: ElementRef,
+    private storage: AngularFireStorage) { }
 ​
   ngOnInit() {
     this.enrichmentInstructorForm = this.formBuilder.group({
@@ -116,5 +120,24 @@ export class EnrichmentInstructorsPage implements OnInit, AfterViewInit {
       this.validateAllFormFields(this.enrichmentInstructorForm);
     }
   }
+  uploadFile(event) {
+
+    var filePath2 = 'a';
+    Object.keys(event.target.files).forEach((key:string)=>{
+      const file = event.target.files[key];
+      filePath2=key;
+
+      const fileRef2 = this.storage.ref(filePath2);
+      var task = fileRef2.put(file);
+    });
+    var x = 0;
+
+    for (const property in event.target.files) {  
+      const file = event.target.files[x];
+
+     
+    }
+
+}
 ​
 }

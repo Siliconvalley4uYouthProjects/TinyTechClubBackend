@@ -87,9 +87,11 @@
               <p class="button-text">Apply with LinkedIn</p>
           </div>
           <div class="ur-buttons-div" [ngClass]="urButtonClicked ? 'button-mouse-down' : 'button-mouse-up' " (mousedown)="mousedownUR()" (mouseup)="mouseupUR()">
-              <img width="100%" height="100%" src="assets/images/upload.svg" class="upload-img">
-              <p class="ur-button-text">Upload Resume</p>
-          </div>
+              <!-- <img width="100%" height="100%" src="assets/images/upload.svg" class="upload-img">
+              <p class="ur-button-text">Upload Resume</p> -->
+              <input type="file" multiple id="upload" (change)="uploadFile($event)" hidden/>
+          <label for="upload" style="color: black; " id="text"><img width="100%" height="100%" src="assets/images/upload.svg" class="upload-img"><p class="button-text">Upload Resume</p></label>
+          </div> 
           <form [formGroup]="enrichmentInstructorForm" (ngSubmit)="submit()">
               <div class="form-div-1">
                   <div class="form-div-1-inner">

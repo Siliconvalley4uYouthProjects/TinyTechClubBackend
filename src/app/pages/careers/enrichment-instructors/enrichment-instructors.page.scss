@@ -146,6 +146,20 @@ ul li::before {
     text-align: center;
     cursor: pointer;
 }
+.label{
+    display: inline-block;
+    background-color: #DAE84D;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 320.53px;
+    height: 60.52px;
+    text-align: center; 
+}
+
 .button-mouse-down{
     background-color: var(--ion-color-TTCLimeClick);
 }
