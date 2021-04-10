@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     let menu: Menu = {
       name: 'Program Overview',
-      path: 'overview',
+      path: 'home',
       isSelected: false
     };
     this.menuList.push(menu);

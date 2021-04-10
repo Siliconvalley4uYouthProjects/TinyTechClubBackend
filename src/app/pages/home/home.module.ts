@@ -15,7 +15,6 @@ import { LearnWhatYouWantComponent } from './learn-what-you-want/learn-what-you-
 import { OurCommunityPartnersComponent } from './our-community-partners/our-community-partners.component';
 import { LEGORoboticsKitsComponent } from './lego-robotics-kits/lego-robotics-kits.component';
 import { RegisterTodayComponent } from './register-today/register-today.component';
-
 import { ComponentsModule } from 'src/app/components/components.module';
 
 
@@ -34,7 +33,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
     LearnWhatYouWantComponent,
     OurCommunityPartnersComponent,
     LEGORoboticsKitsComponent,
-    RegisterTodayComponent
+    RegisterTodayComponent,
   ],
   exports: [],
 })

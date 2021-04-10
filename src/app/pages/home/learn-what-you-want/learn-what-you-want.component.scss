@@ -2,7 +2,12 @@
     position: relative;
     display: flex;
 }
-
+.squiggleImg {
+    width: 70%;
+    position: absolute;
+    top: -90%;
+    right: 20%;
+}
 .rightDiv {
     flex: 12;
 }
@@ -53,6 +58,12 @@
 
 
 @media (max-width: 1207px){
+    .squiggleImg {
+        width: 50%;
+        position: absolute;
+        top: -85%;
+        right: 20%;
+    }
     .leftDiv .contentDiv {
         min-width: 470px;
         top: 20%;
@@ -74,7 +85,18 @@
         margin: 25px auto;
     }
 }
+@media (max-width: 1120px){
+    .squiggleImg {
+        top: -85%;
+    }
+}
 @media (max-width: 939px){
+    .squiggleImg {
+        width: 40%;
+        position: absolute;
+        top: -55%;
+        right: 20%;
+    }
     .leftDiv .contentDiv {
         min-width: 350px;
         top: 15%;
@@ -94,6 +116,14 @@
     .registerNowDiv {
         width: 170px;
         margin: 20px auto;
+    }
+}
+@media (max-width: 790px){
+    .squiggleImg {
+        width: 40%;
+        position: absolute;
+        top: -50%;
+        right: 20%;
     }
 }
 @media (max-width: 681px){

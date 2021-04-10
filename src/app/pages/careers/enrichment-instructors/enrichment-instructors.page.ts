@@ -137,6 +137,7 @@ export class EnrichmentInstructorsPage implements OnInit, AfterViewInit {
 
      
     }
+    
 
 }
 ​
