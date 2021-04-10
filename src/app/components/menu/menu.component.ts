@@ -98,5 +98,8 @@ export class MenuComponent implements OnInit {
       this.menu.nativeElement.style.display = 'flex';
     }
   }
+  routetoHome(){
+    this.router.navigateByUrl('/home');
+  }
 
 }
