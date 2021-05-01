@@ -127,6 +127,18 @@ export class StemSocialsPage implements OnInit {
     event.target.parentElement.getElementsByClassName("toEdit").item(0).style.display = "none";
   }
 
+  
+  deleteEvent (event){
+    console.log(event);
+    
+    this.events = this.events.filter(function(value){ 
+      return value != event;
+    });
+
+    this.eventsChange();
+  }
+
+
   addEvent() {
     console.log("adding Event");
     this.events.unshift({
@@ -136,10 +148,12 @@ export class StemSocialsPage implements OnInit {
       eventDay: 'TBA',
       eventDate: 'TBA',
       eventMonth: 'TBA',
-      eventDateTime: {seconds: 0, nanoseconds: 0},
+      eventDateTime: new Date(),
       eventLocation: 'TBA',
       eventDescription: 'None'
     });
+
+    this.eventsChange();
   }
 ​
   validateAllFormFields(formGroup: FormGroup) {

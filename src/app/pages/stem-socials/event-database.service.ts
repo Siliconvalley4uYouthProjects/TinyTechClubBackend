@@ -13,7 +13,7 @@ export class EventDatabaseService {
   // pastEvents = new BehaviorSubject<any[]>();
   // changedEvents = new BehaviorSubject<any[]>();
 
-  constructor(private db: AngularFirestore) {
+  constructor(public db: AngularFirestore) {
     this.getEventData();
   }
 
@@ -24,9 +24,6 @@ export class EventDatabaseService {
       
       var eventsInPro = [];
       eventsList.forEach(event => {
-        console.log(event['time']);
-        console.log(typeof(event['time']));
-
         var eventTime = event['time'].toDate()
       
         var day = this.getDayFromNum(eventTime.getDay());
@@ -87,27 +84,44 @@ export class EventDatabaseService {
     
     var colRef = this.db.collection("/pageData/SteamSocials/upcomingEvents");
 
-    this.changedEvents.getValue().forEach(eventObj => {
-      var eventID = eventObj["eventID"];
-      var docRef;
-
-      if(eventID != "") {
-        docRef = colRef.doc(eventObj["eventID"]);
-      }
-      else {
-        docRef = colRef.doc();
-      }
-      
-      var dbEvent = {
-        time: eventObj["eventDateTime"],
-        title: eventObj["eventTitle"],
-        location:  eventObj["eventLocation"],
-        description: eventObj["eventDescription"]
-      }
-      docRef.set(dbEvent).then(res => {
-        console.log(res);
+    var deleteIDs = [];
+    colRef.get().subscribe(docs => {
+      docs.forEach(doc => {
+        deleteIDs.push(doc.id);
       });
+
+
+      this.changedEvents.getValue().forEach(eventObj => {
+        var eventID = eventObj["eventID"];
+  
+        var dbEvent = {
+          time: eventObj["eventDateTime"],
+          title: eventObj["eventTitle"],
+          location:  eventObj["eventLocation"],
+          description: eventObj["eventDescription"]
+        }
+        
+        if(eventID != "") {
+          console.log(eventID);
+          deleteIDs = deleteIDs.filter(function(value){ 
+            return value != eventID;
+          });
+          var docRef = colRef.doc(eventID);
+          docRef.set(dbEvent);
+        }
+        else {
+          colRef.add(dbEvent);
+        }
+        console.log(deleteIDs);
+        deleteIDs.forEach(deleteID => {
+          colRef.doc(deleteID).delete();
+        });
+      });
+
+
     });
+
+    
   }
 
   getDayFromNum(num:Number) {
