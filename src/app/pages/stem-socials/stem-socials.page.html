@@ -83,6 +83,43 @@
   </ion-segment>
 
   <div [hidden]="ishidden" class="float-container">
+
+    <!-- Add event -->
+    <div class="event addEvent" (click)="addEvent()">
+      <div
+        class="checkbox-area"
+        style="
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div class="checkbox">
+          <img
+            class="checkmark"
+            src="assets/images/Vector.png"
+            alt="Checkmark"
+          />
+        </div>
+      </div>
+      <div style= "color: black;"class="body">
+        <div class="calendar-div">
+          <div class="calender">
+            <img src="assets/images/calendar.png" alt="calender Image" />
+            <p class="month"></p>
+            <p class="date"></p>
+            <p class="day"></p>
+          </div>
+        </div>
+        <div class="text displayText">
+          <h2>Click to Add Event</h2>
+          <h4></h4>
+          <p>Click this event to add a new Event</p>
+        </div>
+      </div>
+    </div>
+    <!-- Upcoming Events -->
     <div *ngFor="let event of events" class="event">
       <div
         class="checkbox-area"
@@ -109,12 +146,24 @@
             <p class="month">{{event.eventMonth}}</p>
             <p class="date">{{event.eventDate}}</p>
             <p class="day">{{event.eventDay}}</p>
+            <input class="dateInput" type="text" style="display: none;">
           </div>
         </div>
-        <div class="text">
+        <div class="text displayText">
           <h2>{{event.eventTitle}}</h2>
           <h4>{{event.eventTime}} | {{event.eventLocation}}</h4>
           <p>{{event.eventDescription}}</p>
+        </div>
+        <div class="text editText" style="display: none;">
+          <h2><input type="text" [(ngModel)]="event.eventTitle" (ngModelChange)="eventsChange()"></h2>
+          <h4><input type="text" [(ngModel)]="event.eventTime" (ngModelChange)="eventsChange()"> | <input type="text" [(ngModel)]="event.eventLocation" (ngModelChange)="eventsChange()"></h4>
+          <p><textarea type="text" [(ngModel)]="event.eventDescription" (ngModelChange)="eventsChange()"></textarea></p>
+        </div>
+        <div class="edit fromEdit" (click)="editEvent($event)">
+          Edit
+        </div>
+        <div class="edit toEdit" (click)="stopEditEvent($event)" style="display: none;">
+          Stop Edit
         </div>
       </div>
     </div>
@@ -145,6 +194,9 @@
   ​
   <!-- Space -->
   <div style="height: 200px"></div>
+
+
+  <app-change-prompt></app-change-prompt>
 
   <app-footer></app-footer>
 </div>

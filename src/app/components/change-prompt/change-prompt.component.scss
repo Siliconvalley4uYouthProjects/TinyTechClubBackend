@@ -1,0 +1,25 @@
+.outerdiv {
+    width: 80%;
+    height: 50px;
+    background-color: var(--ion-color-TTCLime);
+    border: 3px black solid;
+    margin: auto;
+
+    
+}
+.stuff {
+    height: fit-content;
+    width: fit-content;
+
+    margin: auto;
+    margin-top: 10px;
+
+    font-size: 20px;
+}
+.stuff button {
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 15px;
+    
+    border: 1px black solid;
+}

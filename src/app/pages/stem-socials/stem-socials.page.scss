@@ -274,10 +274,9 @@
   margin-bottom: 30px;
   flex-direction: row;
 }
-// .event .checkbox-area {
-//     // height: 100%;
-
-// }
+.event .checkbox-area {
+  background-color: #e3ba2d;
+}
 .event .checkbox {
   background: #ffffff;
   width: 33px;
@@ -332,6 +331,11 @@
   max-width: 189px;
   color: #828282;
 }
+.event .body .calendar-div .calender .dateInput {
+  position: relative;
+  top: -380px;
+  width: 190px;
+}
 .event .body .text {
   flex: 70%;
   padding: 120px 5% 107px 0;
@@ -354,6 +358,39 @@
   line-height: 27px;
 }
 
+.event .body .text h2 input {
+  height: 40px;
+}
+.event .body .text h4 input {
+  height: 25px;
+  width: 75px;
+}
+.event .body .text p textarea {
+  // min-width: 800px;
+  // max-width: 800px;
+  min-width: 100%;
+  max-width: 100%;
+
+  min-height: 140px;
+}
+
+// .hidden
+
+.event .body .edit {
+  position: relative;
+  text-decoration: underline;
+  top: 50px;
+  right: 50px;
+  width: 100px;
+}
+
+.addEvent .body {
+  background-color: rgba(189, 189, 189, 0.25);
+}
+
+.addEvent .checkbox-area {
+  background-color: rgb(189, 189, 189);
+}
 
 @media (max-width: 800px) {
   .event .body {
