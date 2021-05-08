@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'stem-social-confirmation',
     loadChildren: () => import('./pages/stem-social-confirmation/stem-social-confirmation.module').then( m => m.StemSocialConfirmationPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   }
 ];
 

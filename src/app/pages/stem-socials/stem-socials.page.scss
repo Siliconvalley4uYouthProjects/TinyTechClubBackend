@@ -381,7 +381,26 @@
   text-decoration: underline;
   top: 50px;
   right: 50px;
-  width: 100px;
+  width: 30px;
+  height: 20px;
+}
+
+.event .body .toEdit {
+  position: relative;
+  text-decoration: underline;
+  top: 10px;
+  right: 87px;
+  width: 200px;
+  height: 20px;
+}
+
+.event .body .deleteEvent {
+  position: relative;
+  text-decoration: underline;
+  top: 10px;
+  right: 87px;
+  width: 50px;
+  height: 20px;
 }
 
 .addEvent .body {
@@ -401,6 +420,15 @@
   }
   .event .body .calendar-div .calender {
       margin: 25px 0 25px calc(50% - 95px);
+  }
+  .event .body .edit {
+    margin-left: 600px;
+    top: -60px;
+  }
+  
+  .event .body .deleteEvent {
+    margin-left: 687px;
+    top: -100px;
   }
 }
 
