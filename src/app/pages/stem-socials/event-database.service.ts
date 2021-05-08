@@ -26,17 +26,13 @@ export class EventDatabaseService {
       eventsList.forEach(event => {
         var eventTime = event['time'].toDate()
       
-        var day = this.getDayFromNum(eventTime.getDay());
-        var month = this.getMonthFromNum(eventTime.getMonth());
         
         var appendEvent = {
           eventID: event['id'],
           eventTitle: event["title"],
           eventTime: `${eventTime.getHours()}:${eventTime.getMinutes()}`,
-          eventDay: day,
-          eventDate: eventTime.getDate(),
-          eventMonth: month,
-          eventDateTime: event['time'],
+          eventDateWritten: `${eventTime.getMonth() + 1}/${eventTime.getDate()}/${eventTime.getFullYear()}`,
+          eventDateTime: eventTime,
           eventLocation: event["location"],
           eventDescription: event["description"]
         }

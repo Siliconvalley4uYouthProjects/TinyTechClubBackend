@@ -182,4 +182,33 @@ export class StemSocialsPage implements OnInit {
     // if(this.events)
   }
 
+  
+  updateDateTime(event, i) {
+    event = event.split("/");
+    this.events[i]["eventDateTime"].setMonth(event[0] - 1);
+    this.events[i]["eventDateTime"].setDate(event[1]);
+    this.events[i]["eventDateTime"].setFullYear(event[2]);
+
+    var dataTime = this.events[i]["eventDateTime"]
+    this.events[i]["eventDateWritten"] = `${dataTime.getMonth() + 1}/${dataTime.getDate()}/${dataTime.getFullYear()}`
+
+    this.eventsChange();
+  }
+  updateTime(event, i) {
+    event = event.split(":");
+    this.events[i]["eventDateTime"].setHours(event[0], event[1]);
+
+    var dataTime = this.events[i]["eventDateTime"]
+    this.events[i]["eventTime"] = `${dataTime.getHours()}:${dataTime.getMinutes()}`
+
+    this.eventsChange();
+  }
+
+  getDayFromNum(num:Number) {
+    return this.eventDatabaseService.getDayFromNum(num);
+  }
+
+  getMonthFromNum(num:Number) {
+    return this.eventDatabaseService.getMonthFromNum(num);
+  }
 }
