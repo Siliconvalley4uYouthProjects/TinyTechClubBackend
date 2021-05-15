@@ -751,6 +751,14 @@ img{
 
 }
 
+app-change-prompt {
+  position: fixed;
+  bottom: 0px;
+  width: 80%;
+  left: 10%;
+  // display: none;
+}
+
 // Header Reactive
 @media (max-width: 750px){
   .stem-socials-header-rectangle {

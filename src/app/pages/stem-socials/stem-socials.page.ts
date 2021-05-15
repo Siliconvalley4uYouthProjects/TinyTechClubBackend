@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 import { CommunityPartner } from 'src/app/models/communityPartner.model';
@@ -6,6 +6,7 @@ import { CommunityPartner } from 'src/app/models/communityPartner.model';
 import { observable, Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { EventDatabaseService } from './event-database.service';
+import { ChangePromptComponent } from '../../components/change-prompt/change-prompt.component'
 
 @Component({
   selector: 'app-stem-socials',
@@ -13,8 +14,13 @@ import { EventDatabaseService } from './event-database.service';
   styleUrls: ['./stem-socials.page.scss'],
 })
 export class StemSocialsPage implements OnInit {
+  @ViewChild('changePrompt') changePrompt: ElementRef;
+  // @ViewChild(ChangePromptComponent, { static: false }) changePrompt: ChangePromptComponent;
+
   ishidden = false;
   pastishidden = true;
+
+  hide = true;
 
   
   events: any[];
@@ -74,22 +80,45 @@ export class StemSocialsPage implements OnInit {
 ​
   constructor(private formBuilder: FormBuilder, private eventDatabaseService:EventDatabaseService) { }
 ​
+  
+
+  // ngAfterViewInit() {
+  //   console.log(this.changePrompt);
+  //   console.log(typeof(this.changePrompt));
+
+    
+  // }
+
   ngOnInit() {
     
     this.eventDatabaseService.events.subscribe(events => {
+      console.log("change")
       this.events = events;
     });
     this.eventDatabaseService.pastEvents.subscribe(pastEvents => {
       this.pastEvents = pastEvents;
     });
 
-    // this.eventDatabaseService.getEventData();
+    
 
-    // console.log(this.pastEvents);
-
-
-    // Sub to events
-    // events
+    this.eventDatabaseService.changedEvents.subscribe(changedEvents => {
+      console.log((changedEvents))
+      console.log((this.eventDatabaseService.events.getValue()))
+      console.log((changedEvents != this.eventDatabaseService.events.getValue()))
+      if(changedEvents != this.eventDatabaseService.events.getValue()) {
+        // Show Prompt
+        // this.changePrompt.nativeElement.style.display = 'block';
+        console.log("unhide")
+        this.hide = false;
+      }else{
+        // Hide Prompt
+        // console.log(this.changePrompt);
+        // console.log(typeof(this.changePrompt));
+        // this.changePrompt.nativeElement.style.display = 'none';
+        console.log("hide")
+        this.hide = true;
+      }
+    });
 
 
 
@@ -212,3 +241,7 @@ export class StemSocialsPage implements OnInit {
     return this.eventDatabaseService.getMonthFromNum(num);
   }
 }
+function ngAfterViewInit() {
+  throw new Error('Function not implemented.');
+}
+
