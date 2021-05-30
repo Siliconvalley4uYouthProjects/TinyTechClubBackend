@@ -18,7 +18,7 @@ export class EventDatabaseService {
   }
 
   getEventData() {
-    var collectionRef = this.db.collection("/pageData/SteamSocials/upcomingEvents", ref => ref.orderBy("time")); // Not loading becase of this orderBy
+    var collectionRef = this.db.collection("/pageData/SteamSocials/events", ref => ref.orderBy("time")); // Not loading becase of this orderBy
     var eventsListRef = collectionRef.valueChanges({idField: 'id'});
     eventsListRef.subscribe(eventsList => {
       
@@ -44,7 +44,7 @@ export class EventDatabaseService {
 
 
 
-    var oldCollectionRef = this.db.collection("/pageData/SteamSocials/preveousEvents", ref => ref.orderBy("time"));
+    var oldCollectionRef = this.db.collection("/pageData/SteamSocials/events", ref => ref.orderBy("time"));
     var oldItemRef = oldCollectionRef.valueChanges({idField: 'id'});
     oldItemRef.subscribe(stuff => {
 
@@ -78,7 +78,7 @@ export class EventDatabaseService {
   submit() {
     console.log(this.changedEvents.getValue());
     
-    var colRef = this.db.collection("/pageData/SteamSocials/upcomingEvents");
+    var colRef = this.db.collection("/pageData/SteamSocials/events");
 
     var deleteIDs = [];
     colRef.get().subscribe(docs => {
