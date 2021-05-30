@@ -1,6 +1,33 @@
+<ion-content id="body">
 
-<ion-content>
-<h1>bruh
-  
-</h1>
+	<div class="header">
+		TTS Admin Login
+	</div>
+<div class="layer1">
+
+	<div class = "layer2">
+
+		<ion-list>
+		<div class = "u-name">
+		<ion-item>
+		  <ion-label position="floating">Username</ion-label>
+		  <ion-input type="username" [(ngModel)]="username"></ion-input>
+		</ion-item>
+		</div>
+	  
+	<div class = "pwd">
+		<ion-item>
+		  <ion-label position="floating">Password</ion-label>
+		  <ion-input type="password" [(ngModel)]="password"></ion-input>
+		</ion-item>
+	</div>
+
+		</ion-list>
+
+	</div>
+	  
+	<div class="button">
+	  <ion-button fill="solid" expand="block" color="dark" (click)="adminlogin()">Login</ion-button>
+	</div>
+</div>
 </ion-content>
