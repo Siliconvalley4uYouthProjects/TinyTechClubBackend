@@ -4,13 +4,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyBHURp0j4PqJiNr22THa2vkK-2dWJT-MBA",
-    authDomain: "uber-bcd77.firebaseapp.com",
-    databaseURL: "https://uber-bcd77.firebaseio.com",
-    projectId: "uber-bcd77",
-    storageBucket: "uber-bcd77.appspot.com",
-    messagingSenderId: "256586758635",
-    appId: "1:256586758635:web:ffa2eaf41266b68df6c1ae"
+    apiKey: "AIzaSyBDUJuc5l6SjZ8D3zwBGsgOjYIqPvi44gU",
+    authDomain: "tiny-techs-club.firebaseapp.com",
+    projectId: "tiny-techs-club",
+    storageBucket: "tiny-techs-club.appspot.com",
+    messagingSenderId: "757809244371",
+    appId: "1:757809244371:web:bc00f7f33ba34305050c26",
+    measurementId: "G-CDST9JFE2F"
   }
 }; 
 
