@@ -13,6 +13,7 @@ import { ComponentsModule } from './components/components.module';
 
 
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import {AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { environment } from '../environments/environment';
@@ -26,7 +27,8 @@ import { environment } from '../environments/environment';
     AppRoutingModule, 
     ComponentsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [
     StatusBar,

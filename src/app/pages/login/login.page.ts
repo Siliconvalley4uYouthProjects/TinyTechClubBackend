@@ -11,16 +11,22 @@ import { auth } from 'firebase/app';
 })
 export class LoginPage implements OnInit {
 
-  username: string = ""
-	password: string = ""
+  user: any = {};
 
-  constructor(private router: Router, public afAuth: AngularFireAuth) { }
+  constructor(private router: Router, private afAuth: AngularFireAuth) { }
 
   ngOnInit() {
   }
 
-  adminLogin(){
-    //
+  adminlogin(){
+    this.afAuth.signInWithEmailAndPassword(this.user.email, this.user.password).then( (res)=> {
+console.log(res);
+console.log("authenticated");
+this.router.navigateByUrl('/stem-socials')
+    }) 
+    .catch( error => {
+      console.log(error);
+    })
   }
 
 }

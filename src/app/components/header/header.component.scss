@@ -28,6 +28,19 @@
 
     color: #333333;
 }
+.button{
+    margin-right: 90%;
+}
+@media (max-width: 1066px){
+    .button{
+        margin-right: 90%;
+    }
+}
+@media (max-width: 1000px){
+    .button{
+        margin-right: 88%;
+    }
+}
 @media (max-width: 640px){
     .header-title{
         position: absolute;
