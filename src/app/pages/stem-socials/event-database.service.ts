@@ -10,6 +10,7 @@ export class EventDatabaseService {
   events = new BehaviorSubject([]);
   pastEvents = new BehaviorSubject([]);
   changedEvents = new BehaviorSubject([]);
+  changedPastEvents = new BehaviorSubject([]);
   // pastEvents = new BehaviorSubject<any[]>();
   // changedEvents = new BehaviorSubject<any[]>();
 
@@ -18,7 +19,7 @@ export class EventDatabaseService {
   }
 
   getEventData() {
-    var collectionRef = this.db.collection("/pageData/SteamSocials/events", ref => ref.orderBy("time")); // Not loading becase of this orderBy
+    var collectionRef = this.db.collection("/pageData/SteamSocials/events", ref => ref.orderBy("time").where("time", ">=", new Date()));
     var eventsListRef = collectionRef.valueChanges({idField: 'id'});
     eventsListRef.subscribe(eventsList => {
       
@@ -44,39 +45,34 @@ export class EventDatabaseService {
 
 
 
-    var oldCollectionRef = this.db.collection("/pageData/SteamSocials/events", ref => ref.orderBy("time"));
-    var oldItemRef = oldCollectionRef.valueChanges({idField: 'id'});
-    oldItemRef.subscribe(stuff => {
-
+    var collectionRef = this.db.collection("/pageData/SteamSocials/events", ref => ref.orderBy("time").where("time", "<", new Date()));
+    var eventsListRef = collectionRef.valueChanges({idField: 'id'});
+    eventsListRef.subscribe(eventsList => {
       
-      var pastEventsInPro = [];
-      stuff.forEach(thing => {
-        var thingTime = thing['time'].toDate()
+      var eventsInPro = [];
+      eventsList.forEach(event => {
+        var eventTime = event['time'].toDate()
       
-        var day = this.getDayFromNum(thingTime.getDay());
-        var month = this.getMonthFromNum(thingTime.getMonth());
-
+        
         var appendEvent = {
-          eventID: thing['id'],
-          eventTitle: thing["title"],
-          eventTime: `${thingTime.getHours()}:${thingTime.getMinutes()}`,
-          eventDay: day,
-          eventDate: thingTime.getDate(),
-          eventMonth: month,
-          eventLocation: thing["location"],
-          eventDescription: thing["description"]
+          eventID: event['id'],
+          eventTitle: event["title"],
+          eventTime: `${eventTime.getHours()}:${eventTime.getMinutes()}`,
+          eventDateWritten: `${eventTime.getMonth() + 1}/${eventTime.getDate()}/${eventTime.getFullYear()}`,
+          eventDateTime: eventTime,
+          eventLocation: event["location"],
+          eventDescription: event["description"]
         }
 
-
-        pastEventsInPro.push(appendEvent);
+        eventsInPro.push(appendEvent);
       });
-      
-      this.pastEvents.next(pastEventsInPro);
+      this.pastEvents.next(eventsInPro);
     });
   }
 
   submit() {
     console.log(this.changedEvents.getValue());
+    console.log(this.changedPastEvents.getValue());
     
     var colRef = this.db.collection("/pageData/SteamSocials/events");
 
@@ -88,6 +84,33 @@ export class EventDatabaseService {
 
 
       this.changedEvents.getValue().forEach(eventObj => {
+        var eventID = eventObj["eventID"];
+  
+        var dbEvent = {
+          time: eventObj["eventDateTime"],
+          title: eventObj["eventTitle"],
+          location:  eventObj["eventLocation"],
+          description: eventObj["eventDescription"]
+        }
+        
+        if(eventID != "") {
+          console.log(eventID);
+          deleteIDs = deleteIDs.filter(function(value){ 
+            return value != eventID;
+          });
+          var docRef = colRef.doc(eventID);
+          docRef.set(dbEvent);
+        }
+        else {
+          colRef.add(dbEvent);
+        }
+        console.log(deleteIDs);
+        deleteIDs.forEach(deleteID => {
+          colRef.doc(deleteID).delete();
+        });
+      });
+
+      this.changedPastEvents.getValue().forEach(eventObj => {
         var eventID = eventObj["eventID"];
   
         var dbEvent = {

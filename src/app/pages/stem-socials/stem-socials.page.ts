@@ -178,6 +178,7 @@ export class StemSocialsPage implements OnInit {
       eventDate: 'TBA',
       eventMonth: 'TBA',
       eventDateTime: new Date(),
+      eventDateWritten: `${new Date().getMonth() + 1}/${new Date().getDate()}/${new Date().getFullYear()}`,
       eventLocation: 'TBA',
       eventDescription: 'None'
     });
@@ -206,9 +207,9 @@ export class StemSocialsPage implements OnInit {
   
   eventsChange() {
     console.log(this.events);
+    console.log(this.pastEvents);
     this.eventDatabaseService.changedEvents.next(this.events);
-
-    // if(this.events)
+    this.eventDatabaseService.changedPastEvents.next(this.pastEvents);
   }
 
   
@@ -223,12 +224,32 @@ export class StemSocialsPage implements OnInit {
 
     this.eventsChange();
   }
+  updatePastDateTime(event, i) {
+    event = event.split("/");
+    this.pastEvents[i]["eventDateTime"].setMonth(event[0] - 1);
+    this.pastEvents[i]["eventDateTime"].setDate(event[1]);
+    this.pastEvents[i]["eventDateTime"].setFullYear(event[2]);
+
+    var dataTime = this.pastEvents[i]["eventDateTime"]
+    this.pastEvents[i]["eventDateWritten"] = `${dataTime.getMonth() + 1}/${dataTime.getDate()}/${dataTime.getFullYear()}`
+
+    this.eventsChange();
+  }
   updateTime(event, i) {
     event = event.split(":");
     this.events[i]["eventDateTime"].setHours(event[0], event[1]);
 
     var dataTime = this.events[i]["eventDateTime"]
     this.events[i]["eventTime"] = `${dataTime.getHours()}:${dataTime.getMinutes()}`
+
+    this.eventsChange();
+  }
+  updatePastTime(event, i) {
+    event = event.split(":");
+    this.pastEvents[i]["eventDateTime"].setHours(event[0], event[1]);
+
+    var dataTime = this.pastEvents[i]["eventDateTime"]
+    this.pastEvents[i]["eventTime"] = `${dataTime.getHours()}:${dataTime.getMinutes()}`
 
     this.eventsChange();
   }
